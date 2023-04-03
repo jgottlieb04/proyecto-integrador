@@ -1,6 +1,6 @@
 const camisetas={
 lista:[
-    
+
     {
         club : "Boca",
         anio : "1993",
@@ -70,7 +70,7 @@ lista:[
     {
         club : "San Lorenzo",
         anio : "2023",
-        sponsor: "",
+        sponsor: "-",
         retro: false
     }
 ]
