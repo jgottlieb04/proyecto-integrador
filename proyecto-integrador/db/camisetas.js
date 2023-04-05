@@ -1,5 +1,11 @@
 const camisetas={
-lista:[
+usuario : {
+    n:"",
+    a:"",
+    f:"",
+    g:""
+},
+productos:[
 
     {
         club : "Boca",
@@ -73,8 +79,29 @@ lista:[
         sponsor: "-",
         retro: false
     }
+],
+comentarios: [
+    {
+        nombre_u :"",
+        texto_c :"",
+        img_p :""
+    },
+    {
+        nombre_u :"",
+        texto_c :"",
+        img_p :""
+    },
+    {
+        nombre_u :"",
+        texto_c :"",
+        img_p :""
+    },
+    {
+        nombre_u :"",
+        texto_c :"",
+        img_p :""
+    },
 ]
-
 }
 
 
