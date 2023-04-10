@@ -1,9 +1,9 @@
 const controller = {
     login: function(req,res){
-  res.send('aqui mandamo al login')
+  res.render('login')
 },
     register:function(req,res){
-  res.send('aqui mandamo al login')
+    return res.render('register')
 }
 }
 module.exports=controller
