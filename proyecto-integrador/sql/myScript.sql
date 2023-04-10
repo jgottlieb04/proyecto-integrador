@@ -1,15 +1,33 @@
 -- crear base de datos --
 -- Un error te caga el proyecto --
-use proyecto;
-create table productos(
-id int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-NombreProd VARCHAR (200) NOT NULL,
-descripcion VARCHAR (200) NOT NULL,
-
-
-createdAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+CREATE SCHEMA proyectoIntegrador;
+USE proyectoIntegrador;
+create table  users (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+email VARCHAR(100) UNIQUE NOT NULL,
+password VARCHAR(500) NOT NULL,
+foto_perfil VARCHAR(500),
+fecha DATE NOT NULL,
+dni INT UNIQUE NOT NULL,
+createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+create table productos(
+id INT UNSIGNED PRIMARY KEY  AUTO_INCREMENT,
+id_users INT UNSIGNED,
+nombre VARCHAR(500) NOT NULL,
+descripcion VARCHAR(500),
+createdAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-
-
+FOREIGN KEY (id_users) REFERENCES users(id)
+);
+create table comentarios(
+id_producto INT UNSIGNED ,
+id_user INT UNSIGNED,
+comentario VARCHAR(500) NOT NULL,
+createdAt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (id_user) REFERENCES users(id),
+FOREIGN KEY (id_producto) REFERENCES productos(id)
 );
