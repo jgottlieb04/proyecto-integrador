@@ -5,7 +5,7 @@
 /*====== Variables ======*/
 :root {
   --yellow: #EAC926;
-  --celeste: #6a9be9;
+  --celeste: #60c8d3;
   --dark-blue: #03264C;
   --light-blue: #1259c3;
   --gray: #666666;
@@ -275,13 +275,13 @@ hr {
 }
 
 .footer-data h2 {
-  color: var(--gray);
+  color: var(--light-gray);
   font-size: 2.4em;
   font-weight: 400;
 }
 
 .footer-data p {
-  color: var(--gray);
+  color: var(--light-gray);
   font-size: 1.5em;
   font-weight: 300;
 }
