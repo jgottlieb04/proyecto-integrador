@@ -1,6 +1,6 @@
 const controller = {
     login: function(req,res){
-  res.render('login')
+   return res.render('login')
 },
     register:function(req,res){
     return res.render('register')
