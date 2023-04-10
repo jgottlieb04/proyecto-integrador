@@ -1,3 +1,4 @@
+
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
 <div class="container products-wrapper">
@@ -6,30 +7,28 @@
             <h2 class="products-title">Registrate</h2>
 
             <section>
-                <form action="/users/profile" method="post">
+                <form action="/register" method="post">
                     <div>
-                        <label> Foto de perfil:</label>
+                        <label> Foto del producto:</label>
                         <input type="file" id="imagen" name="imagen">
                         <input type="submit" value="enviar">
                     </div>
+                    
+                    
                     <div>
-                        <label >Mail:</label>
-                        <input type="email" name="Mail">
+                        <label >nombre del producto:</label>
+                        <input type="text" name="product">
                     </div>
-                    <div>
-                        <label >usuario:</label>
-                        <input type="text" name="user">
+					<div>
+                        <label >descripcion:</label>
+                        <input type="text" name="descripcion">
                     </div>
+                    
                     <div>
-                        <label >Contrasena:</label>
-                        <input type="password" name="contra">
+                        <label >Fecha de carga:</label>
+                        <input type="date" name="Fecha">
                     </div>
-
-                    <div>
-                        <label >Fecha de nacimiento:</label>
-                        <input type="date" name="age">
-                    </div>
-                    <div>
+					<div>
 						<input type="submit">
 					</div>
                 </form>
@@ -40,3 +39,6 @@
 
         <%- include('./partials/footer') %>
        
+
+
+	
