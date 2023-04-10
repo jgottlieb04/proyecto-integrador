@@ -14,6 +14,13 @@ const controller = {
             usuarioLogueado:true
 
         } )
+    },
+    edit: function(req,res){
+        return res.render('profile-edit',{
+            usuarioLogueado:true
+
+        } )
     }
+    
 }
 module.exports=controller
