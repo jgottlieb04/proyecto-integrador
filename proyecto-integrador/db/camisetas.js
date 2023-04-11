@@ -119,4 +119,4 @@ comentarios: [
 
 
 
-module.exports= camisetas
+module.exports= data
