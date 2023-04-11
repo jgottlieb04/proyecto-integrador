@@ -1,4 +1,4 @@
-const camisetas={
+const data={
 usuario : {
     n:"",
     a:"",
