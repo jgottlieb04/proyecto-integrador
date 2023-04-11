@@ -1,4 +1,4 @@
-const data={
+const camisetas={
 usuario : {
     usuario:"chori dominguez",
     fotoDePerfil:"/images/chori.jpeg",
@@ -119,4 +119,4 @@ comentarios: [
 
 
 
-module.exports= data
+module.exports= camisetas
