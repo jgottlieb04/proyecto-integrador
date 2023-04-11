@@ -1,9 +1,9 @@
 const data={
 usuario : {
-    n:"",
-    a:"",
-    f:"",
-    g:""
+    usuario:"chori dominguez",
+    fotoDePerfil:"/images/chori.jpeg",
+    contraseña:"river123",
+    mail:"chorid@gmail.com"
 },
 productos:[
 
@@ -94,24 +94,24 @@ productos:[
 ],
 comentarios: [
     {
-        nombre_u :"",
-        texto_c :"",
-        img_p :""
+        nombre_u :"Chino luna",
+        texto_c :"Increible calidad",
+        img_p :"/images/chino.jpeg"
     },
     {
-        nombre_u :"",
-        texto_c :"",
-        img_p :""
+        nombre_u :"Armani",
+        texto_c :"No hay venden la del 1??",
+        img_p :"/images/armani.jpeg"
     },
     {
-        nombre_u :"",
-        texto_c :"",
-        img_p :""
+        nombre_u :"Sony16",
+        texto_c :"Buenisimas,muchas gracias!!",
+        img_p :"/images/sonic.png"
     },
     {
         nombre_u :"Chori dominguez",
         texto_c :"muy buenas las remeras",
-        img_p :""
+        img_p :"/images/chori.jpeg"
     },
 ]
 }
