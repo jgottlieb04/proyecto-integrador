@@ -1,4 +1,4 @@
-const camisetas={
+const data={
 usuario : {
     n:"",
     a:"",
@@ -109,8 +109,8 @@ comentarios: [
         img_p :""
     },
     {
-        nombre_u :"",
-        texto_c :"",
+        nombre_u :"Chori dominguez",
+        texto_c :"muy buenas las remeras",
         img_p :""
     },
 ]
