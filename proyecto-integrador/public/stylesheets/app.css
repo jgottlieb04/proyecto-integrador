@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Verdana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 /*====== Variables ======*/
 :root {
@@ -174,6 +175,7 @@ hr {
   font-size: 2.4em;
   font-weight: 400;
   color: var(--gray);
+  font-family: 'Times New Roman', serif;
 }
 
 .product-box {
@@ -321,6 +323,7 @@ hr {
 .product-detail-title {
   font-weight: 400;
   font-size: 2.8em;
+  font-family: 'Times New Roman', serif;
 }
 
 .product-detail-description {
@@ -469,6 +472,7 @@ textarea.form-input {
 .main-title{
   font-size: 25px;
   margin-bottom: 10px;
+  font-family: 'Times New Roman', serif;
 }
 
 .btn{
@@ -484,6 +488,7 @@ textarea.form-input {
   .main-header_credit-link {
     margin-top: 0;
     text-align: right;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   .banner {
