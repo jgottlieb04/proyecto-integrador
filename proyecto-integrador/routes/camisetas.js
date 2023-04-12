@@ -9,5 +9,7 @@ router.get('/product-add',ControllerC.index
 );
 router.get('/', ControllerC.remera)
 
+router.get('/search',ControllerC.search)
+
 module.exports = router;
 

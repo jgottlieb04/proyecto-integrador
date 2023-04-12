@@ -11,6 +11,12 @@ remera: function(req,res){
     return res.render('product',{
      usuarioLogueado: false
     })
- },}
+ },
+ search: function(req,res){
+    return res.render('search-results',{
+        usuarioLogueado:true
+
+    } )
+}}
    
 module.exports= camisetasController

@@ -1,3 +1,5 @@
+const { search } = require("../routes")
+
 const controller = {
     login: function(req,res){
    return res.render('login',{
@@ -21,6 +23,7 @@ const controller = {
 
         } )
     }
+    
     
 }
 module.exports=controller
