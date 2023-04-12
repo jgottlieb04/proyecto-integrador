@@ -13,7 +13,7 @@ productos:[
         anio : "1993",
         sponsor: "Parmalat",
         retro: true,
-        imagen:'/images/Boca-1933.jpeg'
+        imagen:'/images/Boca-1993.jpeg'
     },
     {
         club : "Boca",
