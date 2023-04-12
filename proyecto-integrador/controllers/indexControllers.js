@@ -6,7 +6,7 @@ const controller = {
         res.render('index',{
             productos:data.productos,
             comentarios:data.comentarios,
-            usuario:data.usuarios
+            usuario:data.usuario
         })
         
     }

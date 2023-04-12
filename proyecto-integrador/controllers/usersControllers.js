@@ -14,7 +14,10 @@ const controller = {
     profile: function(req,res){
         return res.render('profile',{
             usuarioLogueado:true,
-            perfil:data.usuario
+            perfil:data.usuario,
+            productos:data.productos,
+            comentarios:data.comentarios
+
 
         } )
     },

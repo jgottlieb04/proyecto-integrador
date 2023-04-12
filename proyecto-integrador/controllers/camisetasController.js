@@ -1,4 +1,5 @@
-let camisetas= require('../db/data')
+const data = require('../db/data')
+
 
 
     const camisetasController = {
@@ -10,16 +11,29 @@ let camisetas= require('../db/data')
 remera: function(req,res){
     return res.render('product',{
      usuarioLogueado: false, 
-     camiseta: camisetas.productos, 
-     comentario: camisetas.comentarios,
+     camiseta: data.productos, 
+     comentario: data.comentarios,
+     perfil:data.usuario,
+     
+
     
+    })
+
+ },
+ add: function(req,res){
+    return res.render('product-add',{
+        usuarioLogueado: true,
+        perfil:data.usuario,
+
+
     })
  },
  search: function(req,res){
     return res.render('search-results',{
         usuarioLogueado:true,
-        camiseta: camisetas.productos, 
-     comentario: camisetas.comentarios,
+        camiseta: data.productos, 
+     comentario: data.comentarios,
+     perfil:data.usuario
 
     } )
 }}
