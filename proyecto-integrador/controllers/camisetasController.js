@@ -1,4 +1,4 @@
-let camisetas= require('../db/camisetas')
+let camisetas= require('../db/data')
 
 
     const camisetasController = {
