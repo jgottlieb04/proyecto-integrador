@@ -1,3 +1,5 @@
+const data= require('../db/data')
+
 const controller = {
     login: function(req,res){
    return res.render('login',{
@@ -11,16 +13,19 @@ const controller = {
 },
     profile: function(req,res){
         return res.render('profile',{
-            usuarioLogueado:true
+            usuarioLogueado:true,
+            perfil:data.usuario
 
         } )
     },
     edit: function(req,res){
         return res.render('profile-edit',{
-            usuarioLogueado:true
+            usuarioLogueado:true,
+            perfil:data.usuario
 
         } )
     }
+    
     
 }
 module.exports=controller

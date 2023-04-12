@@ -1,4 +1,4 @@
-const camisetas={
+const data={
 usuario : {
     usuario:"chori dominguez",
     fotoDePerfil:"/images/chori.jpeg",
@@ -12,84 +12,96 @@ productos:[
         descripcion: "",
         anio : "1993",
         sponsor: "Parmalat",
-        retro: true
+        retro: true,
+        imagen:'/images/Boca 1933.jpeg'
     },
     {
         club : "Boca",
         descripcion: "",
         anio : "2000",
         sponsor: "Quilmes",
-        retro: true
+        retro: true,
+        imagen:'/images/Boca 2000.jpeg'
     },
     {
         club : "Boca",
         descripcion: "",
         anio : "2023",
         sponsor: "-",
-        retro: false
+        retro: false,
+        imagen:'/images/Boca Actual.jpeg'
     },
     {
         club : "River",
         descripcion: "",
         anio : "1986",
         sponsor: "Fate O",
-        retro: true
+        retro: true,
+        imagen:'/images/River 1986.jpeg'
     },
     {
         club : "River",
         descripcion: "",
         anio : "2003",
         sponsor: "Budweiser",
-        retro: true
+        retro: true,
+        imagen:'/images/River-2003.jpg'
     },
     {
         club : "River",
         descripcion: "",
         anio : "2023",
         sponsor: "Codere",
-        retro: false
+        retro: false,
+        imagen:'/images/River-Actual.jpeg'
     },
     {
         club : "Independiente",
         descripcion: "",
         anio : "2013",
         sponsor: "TCL",
-        retro: true
+        retro: true,
+        imagen:'/images/Independiente-2013.jpeg'
     },
     {
         club : "Independiente",
         descripcion: "",
         anio : "2023",
         sponsor: "-",
-        retro: false
+        retro: false,
+        imagen:'/images/Independiente-Actual.jpeg'
     },
     {
         club : "Racing",
-        descripcion: "",
+        descripcion: "Remera del racing 2015, estampada con la 15 de lisandro lopez",
         anio : "2015",
         sponsor: "Dueño",
-        retro: true
+        retro: true,
+        imagen:"/images/Racing-2015.jpg"
     },
     {
         club : "Racing",
         descripcion: "",
         anio : "2023",
         sponsor: "Aeroset",
-        retro: false
+        retro: false,
+        imagen:'/images/Racing-Actual.jpeg'
     },
     {
         club : "San Lorenzo",
         descripcion: "",
         anio : "2014",
         sponsor: "Banco Ciudad",
-        retro: true
+        retro: true,
+        imagen:'/images/Sanlorenzo-2014.jpeg'
     },
     {
         club : "San Lorenzo",
         descripcion: "",
         anio : "2023",
         sponsor: "-",
-        retro: false
+        retro: false,
+        imagen:'/images/Sanlorenzo-Actual.jpeg'
     }
 ],
 comentarios: [
@@ -100,7 +112,7 @@ comentarios: [
     },
     {
         nombre_u :"Armani",
-        texto_c :"No hay venden la del 1??",
+        texto_c :"Gran servicio, y buena atencion al cliente",
         img_p :"/images/armani.jpeg"
     },
     {
@@ -110,7 +122,7 @@ comentarios: [
     },
     {
         nombre_u :"Chori dominguez",
-        texto_c :"muy buenas las remeras",
+        texto_c :"muy buenas las remeras de excelente calidad",
         img_p :"/images/chori.jpeg"
     },
 ]
@@ -119,4 +131,4 @@ comentarios: [
 
 
 
-module.exports= camisetas
+module.exports= data

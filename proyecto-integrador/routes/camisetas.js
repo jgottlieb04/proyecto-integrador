@@ -1,4 +1,4 @@
-let camisetas= require('../db/camisetas') 
+let camisetas= require('../db/data') 
 
 var express = require('express');
 
@@ -8,6 +8,8 @@ const ControllerC = require('../controllers/camisetasController');
 router.get('/product-add',ControllerC.index
 );
 router.get('/', ControllerC.remera)
+
+router.get('/search',ControllerC.search)
 
 module.exports = router;
 
