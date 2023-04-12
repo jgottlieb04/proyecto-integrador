@@ -73,7 +73,7 @@ productos:[
     },
     {
         club : "Racing",
-        descripcion: "",
+        descripcion: "Pecho frio",
         anio : "2015",
         sponsor: "Dueño",
         retro: true,

@@ -9,7 +9,7 @@ let camisetas= require('../db/data')
 },
 remera: function(req,res){
     return res.render('product',{
-     usuarioLogueado: false
+     usuarioLogueado: false, camiseta: camisetas.productos, comentario: camisetas.comentarios
     })
  },
  search: function(req,res){
