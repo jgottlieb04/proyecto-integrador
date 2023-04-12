@@ -13,7 +13,7 @@ productos:[
         anio : "1993",
         sponsor: "Parmalat",
         retro: true,
-        imagen:'/images/Boca-1993.jpeg'
+        imagen:'/images/Camisetas/Boca-1993.jpg'
     },
     {
         club : "Boca",
@@ -21,7 +21,7 @@ productos:[
         anio : "2000",
         sponsor: "Quilmes",
         retro: true,
-        imagen:'/images/Boca-2000.jpeg'
+        imagen:'/images/Camisetas/Boca-2000.jpg'
     },
     {
         club : "Boca",
@@ -29,7 +29,7 @@ productos:[
         anio : "2023",
         sponsor: "-",
         retro: false,
-        imagen:'/images/Boca-Actual.jpeg'
+        imagen:'/images/Camisetas/Boca-Actual.jpg'
     },
     {
         club : "River",
@@ -37,7 +37,7 @@ productos:[
         anio : "1986",
         sponsor: "Fate O",
         retro: true,
-        imagen:'/images/River-1986.jpeg'
+        imagen:'/images/Camisetas/River-1986.jpg'
     },
     {
         club : "River",
@@ -45,7 +45,7 @@ productos:[
         anio : "2003",
         sponsor: "Budweiser",
         retro: true,
-        imagen:'/images/River-2003.jpg'
+        imagen:'/images/Camisetas/River-2003.jpg'
     },
     {
         club : "River",
@@ -53,7 +53,7 @@ productos:[
         anio : "2023",
         sponsor: "Codere",
         retro: false,
-        imagen:'/images/River-Actual.jpeg'
+        imagen:'/images/Camisetas/River-Actual.jpg'
     },
     {
         club : "Independiente",
@@ -61,7 +61,7 @@ productos:[
         anio : "2013",
         sponsor: "TCL",
         retro: true,
-        imagen:'/images/Independiente-2013.jpg'
+        imagen:'/images/Camisetas/Independiente-2013.jpg'
     },
     {
         club : "Independiente",
@@ -69,7 +69,7 @@ productos:[
         anio : "2023",
         sponsor: "-",
         retro: false,
-        imagen:'/images/Independiente-Actual.jpeg'
+        imagen:'/images/Camisetas/Independiente-Actual.jpg'
     },
     {
         club : "Racing",
@@ -77,7 +77,7 @@ productos:[
         anio : "2015",
         sponsor: "Dueño",
         retro: true,
-        imagen:"/images/Racing-2015.jpg"
+        imagen:"/images/Camisetas/Racing-2015.jpg"
     },
     {
         club : "Racing",
@@ -85,7 +85,7 @@ productos:[
         anio : "2023",
         sponsor: "Aeroset",
         retro: false,
-        imagen:'/images/Racing-Actual.jpeg'
+        imagen:'/images/Camisetas/Racing-Actual.jpg'
     },
     {
         club : "San Lorenzo",
@@ -93,7 +93,7 @@ productos:[
         anio : "2014",
         sponsor: "Banco Ciudad",
         retro: true,
-        imagen:'/images/Sanlorenzo-2014.jpeg'
+        imagen:'/images/Camisetas/Sanlorenzo-2014.jpg'
     },
     {
         club : "San Lorenzo",
@@ -101,7 +101,7 @@ productos:[
         anio : "2023",
         sponsor: "-",
         retro: false,
-        imagen:'/images/Sanlorenzo-Actual.jpeg'
+        imagen:'/images/Camisetas/Sanlorenzo-Actual.jpg'
     }
 ],
 comentarios: [
