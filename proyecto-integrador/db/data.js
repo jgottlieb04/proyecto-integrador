@@ -1,6 +1,6 @@
 const data={
 usuario : {
-    usuario:"chori dominguez",
+    usuario:"Chori Dominguez",
     fotoDePerfil:"/images/chori.jpeg",
     contraseña:"river123",
     mail:"chorid@gmail.com"
