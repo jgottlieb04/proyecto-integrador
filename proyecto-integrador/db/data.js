@@ -13,7 +13,7 @@ productos:[
         anio : "1993",
         sponsor: "Parmalat",
         retro: true,
-        imagen:'/images/Boca 1933.jpeg'
+        imagen:'/images/Boca-1933.jpeg'
     },
     {
         club : "Boca",
@@ -21,7 +21,7 @@ productos:[
         anio : "2000",
         sponsor: "Quilmes",
         retro: true,
-        imagen:'/images/Boca 2000.jpeg'
+        imagen:'/images/Boca-2000.jpeg'
     },
     {
         club : "Boca",
@@ -29,7 +29,7 @@ productos:[
         anio : "2023",
         sponsor: "-",
         retro: false,
-        imagen:'/images/Boca Actual.jpeg'
+        imagen:'/images/Boca-Actual.jpeg'
     },
     {
         club : "River",
@@ -37,7 +37,7 @@ productos:[
         anio : "1986",
         sponsor: "Fate O",
         retro: true,
-        imagen:'/images/River 1986.jpeg'
+        imagen:'/images/River-1986.jpeg'
     },
     {
         club : "River",
@@ -61,7 +61,7 @@ productos:[
         anio : "2013",
         sponsor: "TCL",
         retro: true,
-        imagen:'/images/Independiente-2013.jpeg'
+        imagen:'/images/Independiente-2013.jpg'
     },
     {
         club : "Independiente",
