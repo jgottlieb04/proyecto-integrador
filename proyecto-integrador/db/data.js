@@ -73,7 +73,7 @@ productos:[
     },
     {
         club : "Racing",
-        descripcion: "Pecho frio",
+        descripcion: "Remera del racing 2015, estampada con la 15 de lisandro lopez",
         anio : "2015",
         sponsor: "Dueño",
         retro: true,
@@ -112,7 +112,7 @@ comentarios: [
     },
     {
         nombre_u :"Armani",
-        texto_c :"No hay venden la del 1??",
+        texto_c :"Gran servicio, y buena atencion al cliente",
         img_p :"/images/armani.jpeg"
     },
     {
@@ -122,7 +122,7 @@ comentarios: [
     },
     {
         nombre_u :"Chori dominguez",
-        texto_c :"muy buenas las remeras",
+        texto_c :"muy buenas las remeras de excelente calidad",
         img_p :"/images/chori.jpeg"
     },
 ]
