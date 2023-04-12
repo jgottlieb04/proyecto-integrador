@@ -11,12 +11,15 @@ remera: function(req,res){
     return res.render('product',{
      usuarioLogueado: false, 
      camiseta: camisetas.productos, 
-     comentario: camisetas.comentarios
+     comentario: camisetas.comentarios,
+    
     })
  },
  search: function(req,res){
     return res.render('search-results',{
-        usuarioLogueado:true
+        usuarioLogueado:true,
+        camiseta: camisetas.productos, 
+     comentario: camisetas.comentarios,
 
     } )
 }}
