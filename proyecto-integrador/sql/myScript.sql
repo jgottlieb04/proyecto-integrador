@@ -32,7 +32,7 @@ FOREIGN KEY (id_user) REFERENCES users(id),
 FOREIGN KEY (id_producto) REFERENCES productos(id)
 );
 
--- CREATE SCHEMA proyectoIntegrador;
+-- -- /CREATE SCHEMA proyectoIntegrador;
 -- USE proyectoIntegrador;
 -- create table  users (
 -- id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -44,10 +44,10 @@ FOREIGN KEY (id_producto) REFERENCES productos(id)
 -- createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 -- updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 -- );
--- INSERT INTO users values(default, 'sony@gmail.com', 'sony123','/images/users/julio.jpg' , '2003-12-22', 45414818, default, default);
--- INSERT INTO users values(default, 'geroa@gmail.com', 'gero04', '/images/users/julio.jpg','2004-06-24',45471562, default, default);
--- INSERT INTO users values(default, 'jgott@gmail.com', '9.12.18', '/images/users/julio.jpg','2004-01-21',45481592, default, default);
--- INSERT INTO users values(default, 'sgalli@gmail.com', 'bears26', '/images/users/julio.jpg','2018-12-09',44296899, default, default);
+-- INSERT INTO users values(default, 'sony@gmail.com', 'sony123','/images/foto1.jpg' , '2003-12-22', 45414818, default, default);
+-- INSERT INTO users values(default, 'geroa@gmail.com', 'gero04', '/images/foto2.jpg','2004-06-24',45471562, default, default);
+-- INSERT INTO users values(default, 'jgott@gmail.com', '9.12.18', '/images/foto3.jpg','2004-01-21',45481592, default, default);
+-- INSERT INTO users values(default, 'sgalli@gmail.com', 'bears26', '/images/foto4.jpg','2018-12-09',44296899, default, default);
 
 
 -- create table productos(
