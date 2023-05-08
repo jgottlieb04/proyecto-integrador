@@ -7,24 +7,16 @@ module.exports= function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER, //saber bien tipos de datos(objeto adentro de objeto) porpiedades y sus metodos.
         },
-        title:{
+        usuario_id:{
+            type: dataTypes.INTEGER,
+        },
+        nombre:{
             type: dataTypes.STRING,
         },
-        rating:{
-            type: dataTypes.DECIMAL,
+        descripcion:{
+            type: dataTypes.STRING,
         },
-        awards:{
-            type: dataTypes.INTEGER,
-        },
-        release_date:{
-            type: dataTypes.DATE,
-        },
-        length:{
-            type: dataTypes.INTEGER,
-        },
-        genre_id:{
-            type: dataTypes.INTEGER,
-        }
+        
     };
     let config = {
         tableName: 'productos',
