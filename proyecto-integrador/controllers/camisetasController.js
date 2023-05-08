@@ -1,4 +1,5 @@
-const data = require('../db/data')
+const data = require('../database/models')
+const product=data.Product //alias del modelo
 
 
 
