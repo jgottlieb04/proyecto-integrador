@@ -6,15 +6,14 @@ const product=data.Product //alias del modelo
     const camisetasController = {
     index: function(req,res){
    return res.render('product-add',{
-    usuarioLogueado: false
+   
    })
 },
 remera: function(req,res){
     return res.render('product',{
-     usuarioLogueado: false, 
-     camiseta: data.productos, 
-     comentario: data.comentarios,
-     perfil:data.usuario,
+        camiseta: data.productos, 
+        comentario: data.comentarios,
+        perfil:data.usuario,
      
 
     
@@ -23,18 +22,16 @@ remera: function(req,res){
  },
  add: function(req,res){
     return res.render('product-add',{
-        usuarioLogueado: true,
-        perfil:data.usuario,
+         perfil:data.usuario,
 
 
     })
  },
  search: function(req,res){
     return res.render('search-results',{
-        usuarioLogueado:true,
         camiseta: data.productos, 
-     comentario: data.comentarios,
-     perfil:data.usuario
+        comentario: data.comentarios,
+        perfil:data.usuario
 
     } )
 }}
