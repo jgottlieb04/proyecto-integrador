@@ -1,7 +1,22 @@
+const data= require('../database/models')
+const Product = data.Product;
+let op = data.sequelize.Op;
 
-const data= require('../db/data')
+const indexController = {
+    index: (req,res) => {
+        Product.findAll()
+        .then(function(result){
 
-const controller = {
+            return res.render("products", { camisetas: result });
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+    }
+}
+
+
+/*const controller = {
     index: function(req, res){
         res.render('index',{
             productos:data.productos,
@@ -11,5 +26,5 @@ const controller = {
         
     }
 }
-
+*/
 module.exports=controller
