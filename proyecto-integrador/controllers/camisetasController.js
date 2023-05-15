@@ -35,5 +35,6 @@ remera: function(req,res){
 
     } )
 }}
-   
+
+
 module.exports= camisetasController
