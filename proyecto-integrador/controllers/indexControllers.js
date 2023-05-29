@@ -7,7 +7,7 @@ const indexController = {
         Product.findAll()
         .then(function(result){
 
-            return res.render("products", { camisetas: result });
+            return res.render("index", { camisetas: result, user: {name: "Juan"}});
         })
         .catch(function(err){
             console.log(err);

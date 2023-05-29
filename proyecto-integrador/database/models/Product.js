@@ -24,19 +24,19 @@ module.exports= function (sequelize, dataTypes){
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     };
     
-    const Products= sequelize.define(alias,cols,config);
+    const Product = sequelize.define(alias,cols,config);
 
-    /* Products.associate = function(models){
+     Product.associate = function(models){
 
-        Products.belongsTo("models.Usuario",{
+        Product.belongsTo(models.Usuario,{
             as: "usuarios",
             foreignKey: "usuario_id"
 
         })
-    } */
+    } 
 
 
-    return Products;
+    return Product;
 
 }; //sequelize y datatypes son objetos literales
 
