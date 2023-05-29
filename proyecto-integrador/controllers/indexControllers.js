@@ -1,3 +1,4 @@
+const { where } = require('sequelize');
 const data= require('../database/models')
 const Product = data.Product;
 let op = data.sequelize.Op;
@@ -12,7 +13,7 @@ const indexController = {
         Product.findAll()
         .then(function(result){
 
-            return res.render("index", { productos: result, comentarios: result, user: {name: "Juan"}});
+            return res.render("index", { productos: result, comentarios: result});
         })
         .catch(function(err){
             console.log(err);
