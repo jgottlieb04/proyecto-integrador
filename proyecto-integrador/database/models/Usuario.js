@@ -1,7 +1,7 @@
 module.exports= function (sequelize, dataTypes){
     let alias="Usuario";
     //mapeo exacto de cada una de las columnas//
-    let col = {
+    let cols = {
         id:{
             autoIncrement: true,
             primaryKey: true,

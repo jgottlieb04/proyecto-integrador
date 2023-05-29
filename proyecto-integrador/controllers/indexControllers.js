@@ -27,4 +27,4 @@ const indexController = {
     }
 }
 */
-module.exports=controller
+module.exports=indexController
