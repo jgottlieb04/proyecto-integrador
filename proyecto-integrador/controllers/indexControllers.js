@@ -4,10 +4,14 @@ let op = data.sequelize.Op;
 
 const indexController = {
     index: (req,res) => {
+
+        let rel = {
+            include: [{association: "commentarios"}, {association: "usuarios"}]
+        }
         Product.findAll()
         .then(function(result){
 
-            return res.render("index", { camisetas: result, user: {name: "Juan"}});
+            return res.render("index", { productos: result, user: {name: "Juan"}});
         })
         .catch(function(err){
             console.log(err);
