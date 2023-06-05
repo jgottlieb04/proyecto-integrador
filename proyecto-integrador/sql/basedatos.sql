@@ -43,7 +43,7 @@ values (default,1,"/images/Boca-1993.jpg",'Real 2023','Remera de Real actual',de
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
 values (default,2,"/images/Boca-1993.jpg",'Liverpool 2013','Remera de Liverpool estampa Suarez',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,3,"/publiv/images/Boca-1993.jpg",'Liverpool 2023','Remera de Liverpool actual',default,default);
+values (default,3,"/images/Boca-1993.jpg",'Liverpool 2023','Remera de Liverpool actual',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
 values (default,4,"/images/Boca-1993.jpg",'Argentina 1986','Remera de Maradona 1986',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
