@@ -7,7 +7,6 @@ const ControllerC = require('../controllers/camisetasController');
 /* GET users listing. */
 router.get('/add',ControllerC.add);
 router.get('/', ControllerC.remera);
-
 router.get('/search',ControllerC.search)
 
 module.exports = router;
