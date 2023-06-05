@@ -17,10 +17,10 @@ module.exports= function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         created_at:{
-            type: dataTypes.timestamps
+            type: dataTypes.DATE
         },
         updated_at:{
-            type: dataTypes.timestamps
+            type: dataTypes.DATE
         }
         
     };
