@@ -15,6 +15,12 @@ module.exports= function (sequelize, dataTypes){
         },
         comentario:{
             type: dataTypes.STRING,
+        },
+        created_at:{
+            type: dataTypes.timestamps
+        },
+        updated_at:{
+            type: dataTypes.timestamps
         }
         
     };
