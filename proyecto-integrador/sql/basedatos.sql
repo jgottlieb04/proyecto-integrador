@@ -39,7 +39,7 @@ values (default,4,'Chelsea 2012',"/images/camisetas/Boca-1993.jpg",'Remera de Ch
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
 values (default,4,'Chelsea 2012',"/images/camisetas/Boca-1993.jpg",'Remera de Chelsea 2012',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,1,'Real 2023','R,"/images/camisetas/Boca-1993.jpg", 'Remera de Real actual',default,default);
+values (default,1,'Real 2023',"/images/camisetas/Boca-1993.jpg", 'Remera de Real actual',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
 values (default,2,'Liverpool 201,"/images/camisetas/Boca-1993.jpg"3','Remera de Liverpool estampa Suarez',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
