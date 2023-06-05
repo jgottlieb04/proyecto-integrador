@@ -20,7 +20,12 @@ module.exports= function (sequelize, dataTypes){
         descripcion:{
             type: dataTypes.STRING,
         },
-        
+        created_at:{
+            type: dataTypes.timestamps
+        },
+        updated_at:{
+            type: dataTypes.timestamps
+        }
     };
     let config = {
         tableName: 'productos',

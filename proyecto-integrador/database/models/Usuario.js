@@ -21,6 +21,12 @@ module.exports= function (sequelize, dataTypes){
         },
         dni:{
             type: dataTypes.INTEGER,
+        },
+        created_at:{
+            type: dataTypes.timestamps
+        },
+        updated_at:{
+            type: dataTypes.timestamps
         }
         
     };
