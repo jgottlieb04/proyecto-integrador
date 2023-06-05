@@ -14,22 +14,22 @@ module.exports= function (sequelize, dataTypes){
             type: dataTypes.STRING,
         },
         imagen:{
-            type:dataTypes.STRING
+            type:dataTypes.STRING,
 
         },
         descripcion:{
             type: dataTypes.STRING,
         },
         created_at:{
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
         }
     };
     let config = {
         tableName: 'productos',
-        timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
+        timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     };
     
