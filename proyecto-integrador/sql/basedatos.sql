@@ -29,25 +29,25 @@ FOREIGN KEY (usuario_id) REFERENCES users(id)
 );
 
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,1,"Newells 2013","/images/Boca-1993.jpg",'Remera de Newells 2013',default,default);
+values (default,1,"Newells 2013","/images/camisetas/Boca-1993.jpg",'Remera de Newells 2013',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,2,"Newells 2013","/images/Boca-1993.jpg",'Remera de Newells 2013',default,default);
+values (default,2,"Newells 2013","/images/camisetas/Boca-1993.jpg",'Remera de Newells 2013',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,3,"Newells 2013","/images/Boca-1993.jpg",'Remera de Newells 2013',default,default);
+values (default,3,"Newells 2013","/images/camisetas/Boca-1993.jpg",'Remera de Newells 2013',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,4,'Chelsea 2012',"/images/Boca-1993.jpg",'Remera de Chelsea 2012',default,default);
+values (default,4,'Chelsea 2012',"/images/camisetas/Boca-1993.jpg",'Remera de Chelsea 2012',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,4,'Chelsea 2012',"/images/Boca-1993.jpg",'Remera de Chelsea 2012',default,default);
+values (default,4,'Chelsea 2012',"/images/camisetas/Boca-1993.jpg",'Remera de Chelsea 2012',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,1,'Real 2023',"/images/Boca-1993.jpg",'Remera de Real actual',default,default);
+values (default,1,'Real 2023','R,"/images/camisetas/Boca-1993.jpg"emera de Real actual',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,2,'Liverpool 2013',"/images/Boca-1993.jpg",'Remera de Liverpool estampa Suarez',default,default);
+values (default,2,'Liverpool 201,"/images/camisetas/Boca-1993.jpg"3','Remera de Liverpool estampa Suarez',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,3,'Liverpool 2023',"/images/Boca-1993.jpg",'Remera de Liverpool actual',default,default);
+values (default,3,'Liverpool 202,"/images/camisetas/Boca-1993.jpg"3','Remera de Liverpool actual',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,4,'Argentina 1986',"/images/Boca-1993.jpg",'Remera de Maradona 1986',default,default);
+values (default,4,'Argentina 198,"/images/camisetas/Boca-1993.jpg"6','Remera de Maradona 1986',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
-values (default,4,'Argentina 2022',"/images/Boca-1993.jpg",'Remera de Messi qatar',default,default);
+values (default,4,'Argentina 202,"/images/camisetas/Boca-1993.jpg"2','Remera de Messi qatar',default,default);
 
 create table comentarios(
 producto_id INT UNSIGNED NOT NULL ,
