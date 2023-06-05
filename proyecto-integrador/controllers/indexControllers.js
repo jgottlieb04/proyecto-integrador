@@ -1,41 +1,42 @@
-const { where } = require('sequelize');
-const data= require('../database/models')
-const Product = data.Product;
-let op = data.sequelize.Op;
+const db= require('../database/models')
+const Product = db.Product; //alias del modelo
+// let op = db.sequelize.Op;
 
 const indexController = {
-    findAll: (req,res) => {
+    index: function(req,res) {
 
-        let rel = {
-            include: [{association: "comentarios"}, {association: "usuarios"}]
-        }
+        // let rel = {
+        //     include: [{association: "comentarios"}, {association: "usuarios"}]
+        // }
 
         Product.findAll()
-        .then(function(result){
+            .then(function(result){
 
-            return res.render("index", { productos: result, comentarios: result});
-        })
-        .catch(function(error){
-            console.log(error);
-        })
-    },
-    show: (req,res) => {
-        let id= req.params.id;
-        Product.findbyPK(id)
-        .then(function(result){
-            return res.render('product',{
-                camisetas: result
+                return res.render("index", { 
+                    productos: result, comentarios: result
+                })
             })
+            .catch(function(error){
+                console.log(error);
+            });
+    }
+    // show: (req,res) => {
+    //     let id= req.params.id;
+    //     Product.findbyPK(id)
+    //     .then(function(result){
+    //         return res.render('product',{
+    //             camisetas: result
+    //         })
         
 
-        })
-        .catch(function(error){
-            console.log(error);
+    //     })
+    //     .catch(function(error){
+    //         console.log(error);
 
-        });
+    //     });
 
        
-    }
+    // }
 }
 
 

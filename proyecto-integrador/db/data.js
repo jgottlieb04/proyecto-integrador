@@ -127,8 +127,3 @@ comentarios: [
     },
 ]
 }
-
-
-
-
-module.exports= data
