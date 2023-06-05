@@ -13,6 +13,10 @@ module.exports= function (sequelize, dataTypes){
         nombre:{
             type: dataTypes.STRING,
         },
+        imagen:{
+            type:dataTypes.STRING
+
+        },
         descripcion:{
             type: dataTypes.STRING,
         },
