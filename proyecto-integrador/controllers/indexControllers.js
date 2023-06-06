@@ -20,18 +20,8 @@ const indexController = {
                 console.log(error);
             });
     },
-    show: (req,res) => {
-         let id= req.params.id;
-         Product.findbyPK(id)
-         .then(function(result){
-             return res.render('product',{
-                 camisetas: result
-             })        
-         })
-         .catch(function(error){
-             console.log(error);
-         });
-    }
+    
+    
 }
 
 

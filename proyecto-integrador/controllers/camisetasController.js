@@ -1,16 +1,20 @@
 const db = require('../database/models')
-const Product =db.Product //alias del modelo
+const camiseta =db.Product //alias del modelo
+let op=db.sequelize.op;
 
 const camisetasController = {
-    remera: function(req,res) {
 
+    detalle: (req,res) => {
         let id= req.params.id;
-        Product.findbyPK(id)
-        .then(function(result){
+        camiseta.findbyPK(id)
+         .then(function(result){
             return res.render('product',{
                 productos: result
-            })
+            })        
         })
+        .catch(function(error){
+            console.log(error);
+        });
     },
     add: function(req,res){
         return res.render('product-add',{usuario: result    
