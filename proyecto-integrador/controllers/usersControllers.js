@@ -1,4 +1,7 @@
-const data= require('../db/data')
+const { Sequelize } = require('../database/models');
+const db = require('../database/models');
+const Usuario=db.Usuario ;
+let op= db.Sequelize.Op
 
 const controller = {
     login: function(req,res){
