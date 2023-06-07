@@ -50,6 +50,7 @@ INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,update
 values (default,4,'Racing 2023',"/images/Camisetas/Racing-Actual.jpg",'Remera de Racing actual',default,default);
 
 create table comentarios(
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 producto_id INT UNSIGNED NOT NULL ,
 usuario_id INT UNSIGNED NOT NULL,
 comentario VARCHAR(500) NOT NULL,
