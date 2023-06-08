@@ -13,9 +13,10 @@ const camisetasController = {
         }
         Product.findByPk(id,rel)
          .then(function(result){
-            //return res.send(result)
+            return res.send(result)
             return res.render('product',{
-                productos: result
+                productos: result,
+               
             })        
         })
         .catch(function(error){
@@ -28,7 +29,7 @@ const camisetasController = {
     },
     search: function(req,res){
         let busqueda=req.query.search;
-        Product.findall(
+        Product.findAll(
             {
                 where:[{
                     descripcion: {[op.like]:`%${busqueda}%`}}
