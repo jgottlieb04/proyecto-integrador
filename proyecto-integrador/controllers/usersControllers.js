@@ -9,10 +9,16 @@ const controller = {
     
    })
 },
+    storelogin: function(req,res){
+        return res.redirect('/users/profile')
+},
     register:function(req,res){
     return res.render('register',{
         
     })
+},
+    store: function(req,res){
+        return res.redirect('/users/login')
 },
     profile: function(req,res){
         return res.render('profile',{
