@@ -23,11 +23,11 @@ const camisetasController = {
             console.log(error);
         });
     },
-    add: function(req,res){
+    add: (req,res) =>{
         return res.render('product-add',{usuario: result    
         })
     },
-    search: function(req,res){
+    search: (req,res) =>{
         let busqueda=req.query.search;
         Product.findAll(
             {
