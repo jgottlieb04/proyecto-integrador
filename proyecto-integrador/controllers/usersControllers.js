@@ -20,7 +20,12 @@ const controller = {
 },
     store: function(req,res){
         let info =req.body;
-        console.log(info)
+        console.log(info);
+        let usersave= {
+            email:info.mail,
+        
+
+        };
         return res.redirect('/users/login')
 },
     profile: function(req,res){
