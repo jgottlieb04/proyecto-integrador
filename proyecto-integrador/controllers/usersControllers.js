@@ -10,6 +10,7 @@ const controller = {
    })
 },
     storelogin: function(req,res){
+        
         return res.redirect('/users/profile')
 },
     register:function(req,res){
@@ -18,6 +19,13 @@ const controller = {
     })
 },
     store: function(req,res){
+        let info =req.body;
+        console.log(info);
+        let usersave= {
+            email:info.mail,
+        
+
+        };
         return res.redirect('/users/login')
 },
     profile: function(req,res){
