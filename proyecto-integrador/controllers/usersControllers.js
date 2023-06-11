@@ -9,10 +9,12 @@ const controller = {
     
    })
 },
-    storelogin: function(req,res){
-        
-        return res.redirect('/users/profile')
-},
+    loginPost: function(req,res){
+    return res.redirect('/users/profile'),{
+     
+    }
+ },
+    
     register:function(req,res){
     return res.render('register',{
         
@@ -31,9 +33,7 @@ const controller = {
     profile: function(req,res){
         return res.render('profile',{
             
-            perfil:data.usuario,
-            productos:data.productos,
-            comentarios:data.comentarios
+            
 
 
         } )
