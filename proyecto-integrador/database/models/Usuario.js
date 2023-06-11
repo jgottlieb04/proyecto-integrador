@@ -8,7 +8,7 @@ module.exports= function (sequelize, dataTypes){
             type: dataTypes.INTEGER, //saber bien tipos de datos(objeto adentro de objeto) porpiedades y sus metodos.
         },
         usuario:{
-            type:dataTypes.string
+            type:dataTypes.STRING
         },
         email:{
             type: dataTypes.STRING,
@@ -34,7 +34,7 @@ module.exports= function (sequelize, dataTypes){
         
     };
     let config = {
-        tableName: 'usuarios',
+        tableName: 'users',
         timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.
     };
