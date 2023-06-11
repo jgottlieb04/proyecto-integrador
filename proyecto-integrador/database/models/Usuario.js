@@ -7,10 +7,13 @@ module.exports= function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER, //saber bien tipos de datos(objeto adentro de objeto) porpiedades y sus metodos.
         },
+        usuario:{
+            type:dataTypes.string
+        },
         email:{
             type: dataTypes.STRING,
         },
-        contraseña:{
+        contrasena:{
             type: dataTypes.STRING,
         },
         foto_perfil:{

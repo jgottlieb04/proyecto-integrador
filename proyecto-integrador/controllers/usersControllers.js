@@ -24,11 +24,24 @@ const controller = {
         let info =req.body;
         console.log(info);
         let usersave= {
-            email:info.mail,
+            usuario:info.user,
+            email:info.Mail,
+            contrasena:info.contra,
+            foto_perfil:info.imagen,
+            fecha:info.age,
+            dni:info.DNI,
         
 
         };
-        return res.redirect('/users/login')
+        console.log(usersave)
+        Usuario.create(usersave)
+        .then(function(result){
+            return res.redirect('/users/login')
+        })
+        .catch(function(error){
+            console.log(error)
+        });
+        
 },
     profile: function(req,res){
         return res.render('profile',{
