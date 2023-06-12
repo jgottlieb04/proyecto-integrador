@@ -1,43 +1,40 @@
 <%- include('./partials/head') %>
-<%- include('./partials/header_logueado') %>
-	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= camiseta[8].club %></h2> 
-			<p class="product-detail-description">
-				<a href="/camisetas">Editar</a>
-			</p>
-		</div>
-		<div class="product-detail">
+	<%- include('./partials/header_logueado') %>
+		<div class="container products-wrapper">
 			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/images/Camisetas/Racing-Actual.jpg" alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= camiseta[8].descripcion %>
-						</p>
-				</article>
-					<div class="col-12 col-lg-4" > 
-					<section class="comments">
-						<% for (let i =0; i <comentario.length; i++) {%>
-						<article>
-							<img src=<%=comentario[i].img_p %> alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href=""><%=comentario[i].nombre_u %>: </a> </strong>
-								 <%=comentario[i].texto_c %></p>
-							</div>
-						</article>
+				<% if (productos.length> 0) { %>
+					<div class="col-12">
+						<h2 class="products-title">Estos productos coinciden con tu búsqueda</h2>
+					</div>
+					<!-- Show the "ultimos" products -->
+					<% for( let i=0; i < productos.length; i++ ) { %>
+						<div class="col-12 col-sm-6 col-lg-3">
+							<section class="product-box">
+								<a href="/camisetas/id/<%= productos[i].id %>">
+									<figure class="product-box_image">
+										<img src="<%= productos[i].imagen %>" alt="">
+									</figure>
+									<article class="product-box_data">
+										<h2>
+											<%= productos[i].nombre %>
+										</h2>
+										<p>
+											<%= productos[i].descripcion %>
+										</p>
+										<p>Comentarios: <%= comentarios.length %>
+										</p>
+									</article>
+								</a>
+							</section>
+						</div>
 						<% } %>
-					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
-				</div>
+							<% } else {%>
+								<div class="col-12">
+									<h2 class="products-title">No hay coincidencias de búsqueda</h2>
+								</div>
+								<% } %>
+
 			</div>
 		</div>
-	</div>
-	<!-- /product detail -->
 
-	<%- include('./partials/footer') %>
+		<%- include('./partials/footer') %>
