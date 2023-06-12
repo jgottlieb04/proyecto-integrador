@@ -13,10 +13,10 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO users values(default,'Santino5' ,'sony@gmail.com', 'sony123','/images/foto1.jpg' , '2003-12-22', 45414818, default, default);
-INSERT INTO users values(default,'gero5' , 'geroa@gmail.com', 'gero04', '/images/foto2.jpg','2004-06-24',45471562, default, default);
-INSERT INTO users values(default,'justo5' , 'jgott@gmail.com', '9.12.18', '/images/foto3.jpg','2004-01-21',45481592, default, default);
-INSERT INTO users values(default,'Maidana' , 'sgalli@gmail.com', 'bears26', '/images/foto4.jpg','2018-12-09',44296899, default, default);
+INSERT INTO users values(default,'Santino5' ,'sony@gmail.com', 'sony123','/images/armani.jpeg' , '2003-12-22', 45414818, default, default);
+INSERT INTO users values(default,'gero5' , 'geroa@gmail.com', 'gero04', '/images/chino.jpeg','2004-06-24',45471562, default, default);
+INSERT INTO users values(default,'justo5' , 'jgott@gmail.com', '9.12.18', '/images/chori.jpeg','2004-01-21',45481592, default, default);
+INSERT INTO users values(default,'Maidana' , 'sgalli@gmail.com', 'bears26', '/images/sonic.png','2018-12-09',44296899, default, default);
 
 create table productos(
 id INT UNSIGNED PRIMARY KEY  AUTO_INCREMENT,
