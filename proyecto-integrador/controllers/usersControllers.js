@@ -21,7 +21,8 @@ const controller = {
             if (result != null){
                 let clavecorrecta=bcrypt.compareSync(contra, result.contrasena)
                 if (clavecorrecta){
-                   return res.redirect("/users/profile")
+                    req
+                   
                 }else {
                     return res.locals ("login")
                     
