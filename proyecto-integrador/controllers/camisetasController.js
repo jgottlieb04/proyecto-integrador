@@ -23,8 +23,7 @@ const camisetasController = {
         });
     },
     add: (req,res) =>{
-        return res.render('product-add',{usuario: result    
-        })
+        return res.render('product-add')
     },
     search: (req,res) =>{
         let busqueda=req.query.search;
