@@ -1,6 +1,6 @@
 <%- include('./partials/head') %>
 	
-<% if (locals.user !=undefined) { %>
+<% if (locals.user != undefined) { %>
 		<%- include('./partials/header_logueado') %>
 			<% } else { %>
 				<%- include('./partials/header') %>
@@ -9,7 +9,7 @@
 						<div class="container products-wrapper">
 							<div class="d-flex align-items-center">
 								<h2 class="products-title">
-									<%= productos.club %>
+									TEST
 								</h2>
 								<p class="product-detail-description">
 									<a href="/camisetas/add">Editar</a>
@@ -18,24 +18,26 @@
 							<div class="product-detail">
 								<div class="row">
 									<article class="col-12 col-lg-8 product-detail-info">
-										<img src='<%= result.imagen %>' alt="."
+										<img src='<%= productos.imagen %>' alt="."
 											class="product-detail-img">
 										<p class="product-detail-description">
-											<%= result.descripcion %>
+											<%= productos.descripcion %>
 										</p>
 									</article>
 									<div class="col-12 col-lg-4">
 										<section class="comments">
-											<% for (let i =0; i < result.comentarios.length; i++) {%>
+											
+											<% for( let i = 0; i < productos.comentarios.length; i++ ) { %>
 												<article>
-													<img src=<%=result.[i].imagen %> alt="">
+													<img src='<%= productos.comentarios[i].usuarios.foto_perfil %>' alt="">
 													<div class="data">
 														<p class="user">
-														<strong> <a href=""><%=result.comentarios[i].usuario_id %>: </a> </strong>
-														 <%=result.comentarios[i].comentario %></p>
+														<strong> <a href="<%= productos.comentarios[i].usuario_id %>"> <%= productos.comentarios[i].usuarios.usuario  %>:</a> </strong>
+														<%= productos.comentarios[i].comentario %>	
+													</p>
 													</div>
 												</article>
-												<% } %>
+											<% } %>
 										</section>
 										<form class="form" action="/camisetas" method="get">
 											<input class="form-input" type="text" value=""

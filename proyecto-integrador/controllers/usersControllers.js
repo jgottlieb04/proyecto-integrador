@@ -1,6 +1,7 @@
 const { Sequelize } = require('../database/models');
 const db = require('../database/models');
 const Usuario=db.Usuario ;
+const bcrypt =require('bcryptjs');
 let op= db.Sequelize.Op
 
 const controller = {
@@ -26,7 +27,7 @@ const controller = {
         let usersave= {
             usuario:info.user,
             email:info.Mail,
-            contrasena:info.contra,
+            contrasena:bcrypt.hashSync(info.contra,10),
             foto_perfil:info.imagen,
             fecha:info.age,
             dni:info.DNI,
