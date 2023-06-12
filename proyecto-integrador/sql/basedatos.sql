@@ -13,10 +13,10 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO users values(default,'Santino5' ,'sony@gmail.com', 'sony123','/images/foto1.jpg' , '2003-12-22', 45414818, default, default);
-INSERT INTO users values(default,'gero5' , 'geroa@gmail.com', 'gero04', '/images/foto2.jpg','2004-06-24',45471562, default, default);
-INSERT INTO users values(default,'justo5' , 'jgott@gmail.com', '9.12.18', '/images/foto3.jpg','2004-01-21',45481592, default, default);
-INSERT INTO users values(default,'Maidana' , 'sgalli@gmail.com', 'bears26', '/images/foto4.jpg','2018-12-09',44296899, default, default);
+INSERT INTO users values(default,'Santino5' ,'sony@gmail.com', 'sony123','/images/armani.jpeg' , '2003-12-22', 45414818, default, default);
+INSERT INTO users values(default,'gero5' , 'geroa@gmail.com', 'gero04', '/images/chino.jpeg','2004-06-24',45471562, default, default);
+INSERT INTO users values(default,'justo5' , 'jgott@gmail.com', '9.12.18', '/images/chori.jpeg','2004-01-21',45481592, default, default);
+INSERT INTO users values(default,'Maidana' , 'sgalli@gmail.com', 'bears26', '/images/sonic.png','2018-12-09',44296899, default, default);
 
 create table productos(
 id INT UNSIGNED PRIMARY KEY  AUTO_INCREMENT,
@@ -64,85 +64,81 @@ FOREIGN KEY (usuario_id) REFERENCES users(id)
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,1,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,1,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,1,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,1,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,1,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,1,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,1,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,2,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,2,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,2,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,2,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,2,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,2,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,2,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,3,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,3,2,'Que buenas remeras me encanta lo retro',default,default);
-
+values (default,3,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,3,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,3,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,3,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,3,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,4,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,4,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,4,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,4,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,4,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,4,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,4,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,5,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,5,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,5,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,5,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,5,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,5,4,'Que buenas remeras me encanta lo retro',default,default);
-
+values (default,5,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,6,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,6,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,6,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,6,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,6,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,6,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,6,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,7,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,7,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,7,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,7,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,7,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,7,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,7,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,8,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,8,2,'Que buenas remeras me encanta lo retro',default,default);
-
+values (default,8,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,8,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,8,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,8,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,8,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,9,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,9,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,9,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,9,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,9,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,9,4,'Que buenas remeras me encanta lo retro',default,default);
+values (default,9,4,'llegaron graciass',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
 values (default,10,1,'Que buenas remeras me encanta lo retro',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,10,2,'Que buenas remeras me encanta lo retro',default,default);
+values (default,10,2,'No me gustaron, mala calidad',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,10,3,'Que buenas remeras me encanta lo retro',default,default);
+values (default,10,3,'MUCHAS GRACIAS BUENARDAS',default,default);
 INSERT INTO comentarios (id,producto_id,usuario_id,comentario,created_at,updated_at)
-values (default,10,4,'Que buenas remeras me encanta lo retro',default,default);
-
+values (default,10,4,'llegaron graciass',default,default);
 
