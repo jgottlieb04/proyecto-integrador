@@ -28,7 +28,7 @@ updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 FOREIGN KEY (usuario_id) REFERENCES users(id)
 );
 
-INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
+INSERT INTO productos (id,usuario_id,comentario_id,nombre,imagen,descripcion,created_at,updated_at)
 values (default,1,"Boca 1993","/images/camisetas/Boca-1993.jpg",'Remera de Boca 1993',default,default);
 INSERT INTO productos (id,usuario_id,nombre,imagen,descripcion,created_at,updated_at)
 values (default,2,"Boca 2000","/images/Camisetas/Boca-2000.jpg",'Remera de Boca 2000',default,default);
