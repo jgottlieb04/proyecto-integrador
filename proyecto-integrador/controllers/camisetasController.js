@@ -31,23 +31,22 @@ const camisetasController = {
         Product.findAll(
             {
                 where:[{
-                    descripcion: {[op.like]:`%${busqueda}%`}}
+                    nombre: {[op.like]:`%${busqueda}%`}}
                 ]
             }
         ) .then(function(result){
-            return res.render('product',{
-                productos: result
-            })        
+            return res.render('search-results',{
+                productos: result, 
+                comentarios: result,
+                usuarios: result
+            })
         })
         .catch(function(error){
             console.log(error);
         });
         
-        return res.render('search-results',{
-            productos: result, 
-            comentarios: result,
-            usuarios: result
-        })
+        
+        
     }
 
 
