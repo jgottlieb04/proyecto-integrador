@@ -12,18 +12,24 @@ const controller = {
 },
     loginPost: function(req,res){
         let emailbuscado= req.body.Mail;
+        let contra = req.body.contra;
         let filtrado = {
             where:[{email:emailbuscado}]
         }
-        Usuario.findOne()
+        Usuario.findOne( filtrado)
         .then((result)=>{
             if (result != null){
-                return res.send("existe el mail")
+                let clavecorrecta=bcrypt.compareSync(contra, result.contrasena)
+                if (clavecorrecta){
+                   return res.redirect("/users/profile")
+                }else {
+                    return res.locals ("login")
+                    
+                }
+            }else {
+                return res.render('login')
             }
-            else {
-                return res.send("no existe el mail")
-            }
-            return res.redirect('/users/profile')
+            
         })
         .catch((err)=>{
             console.log(err)
