@@ -11,9 +11,24 @@ const controller = {
    })
 },
     loginPost: function(req,res){
-    return res.redirect('/users/profile'),{
-     
-    }
+        let emailbuscado= req.body.Mail;
+        let filtrado = {
+            where:[{email:emailbuscado}]
+        }
+        Usuario.findOne()
+        .then((result)=>{
+            if (result != null){
+                return res.send("existe el mail")
+            }
+            else {
+                return res.send("no existe el mail")
+            }
+            return res.redirect('/users/profile')
+        })
+        .catch((err)=>{
+            console.log(err)
+        });
+       
  },
     
     register:function(req,res){
