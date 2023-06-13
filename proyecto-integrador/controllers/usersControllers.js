@@ -23,6 +23,10 @@ const controller = {
                 if (clavecorrecta){
                     
                     req.session.Usuario=result.dataValues
+                    if (req.body.recordar != undefined) {
+                        res.cookie('userId', result.id)
+                        
+                    }
                     return res.redirect('/users/profile')
                    
                 }else {
