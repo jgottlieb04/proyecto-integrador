@@ -24,13 +24,8 @@ app.use(function(req,res,next){
   return next();
 })
 //cookies
-app.use(function(req,res,next){
-  if (req.cookies.userId != undefined && req.session.Usuario == undefined) {
-    let idencookie= req.cookies.userId;
-  } else {
-    return next()
-  }
-});
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
