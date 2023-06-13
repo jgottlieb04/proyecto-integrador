@@ -20,6 +20,11 @@ const indexController = {
                 console.log(error);
             });
     },
+    cerrarSesion: function(req, res){
+        req.session.Usuario = undefined
+        res.redirect("/")
+    }
+
     
     
 }
