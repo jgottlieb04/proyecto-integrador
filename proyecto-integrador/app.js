@@ -16,9 +16,13 @@ app.use(session({secret:"Casacas GGA",resave:false, saveUninitialized:true}));
 //locals
 app.use(function(req,res,next){
   if (req.session.Usuario != undefined) {
+    res.locals.usuarioLogueado= true
     res.locals.Usuario=req.session.Usuario
-    return next()
     
+    
+  }
+  else {
+    res.locals.usuarioLogueado= false
   }
 
   return next();
