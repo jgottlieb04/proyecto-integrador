@@ -23,7 +23,9 @@ const controller = {
                 if (clavecorrecta){
                     
                     req.session.Usuario=result.dataValues
-                    
+                    if (req.body.recordar != undefined) {
+                        res.cookie('userId', result.id, {maxAge: 1000 * 60 * 15})
+                    }
                     return res.redirect('/users/profile')
                    
                 }else {

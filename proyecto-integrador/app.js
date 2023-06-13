@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const db = require('./database/models')
 
 const session = require('express-session')
 var indexRouter = require('./routes/index');
@@ -28,7 +29,24 @@ app.use(function(req,res,next){
   return next();
 })
 //cookies
+app.use(function(req,res,next){
+  if (req.cookies.userId != undefined && req.session.Usuario==undefined) {
+    let idUsuario = req.cookies.userId
+    db.Usuario.findByPk(idUsuario)
+    .then((Usuario)=> {
+      req.session.Usuario= Usuario.dataValues;
+      res.locals.Usuario =Usuario.dataValues;
 
+      return next()
+
+    })
+    .catch((err)=> {
+      console.log(err)
+    })
+  } else {
+    return next()
+  }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
