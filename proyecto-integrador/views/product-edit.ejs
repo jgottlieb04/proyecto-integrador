@@ -1,0 +1,45 @@
+
+<%- include('./partials/head') %>
+<%- include('./partials/header_') %>
+<div class="container products-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="products-title"> Modificar producto</h2>
+
+            <section>
+                <form action="/camisetas/add" method="get">
+                    <div>
+                        <label> Foto del producto:</label>
+                        <input type="file" id="imagen" name="imagen">
+                        
+                    </div>
+                    
+                    
+                    <div>
+                        <label >nombre del producto:</label>
+                        <input type="text" name="product">
+                    </div>
+					<div>
+                        <label >descripcion:</label>
+                        <input type="text" name="descripcion">
+                    </div>
+                    
+                    <div>
+                        <label >Fecha de carga:</label>
+                        <input type="date" name="Fecha">
+                    </div>
+					<div>
+						<input type="submit"> 
+                    
+					</div>
+                </form>
+            </section>
+        </div>
+       
+        
+
+        <%- include('./partials/footer') %>
+       
+
+
+	

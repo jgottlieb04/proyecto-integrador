@@ -44,8 +44,9 @@ const camisetasController = {
             console.log(error);
         });
         
-        
-        
+    },
+    edit: (req,res) =>{
+        return res.render('product-edit')
     }
 
 
