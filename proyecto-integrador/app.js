@@ -30,8 +30,8 @@ app.use(function(req,res,next){
 })
 //cookies
 app.use(function(req,res,next){
-  if (req.cookies.userId != undefined && req.session.Usuario==undefined) {
-    let idUsuario = req.cookies.userId
+  if (req.cookies.usuarioid != undefined && req.session.Usuario==undefined) {
+    let idUsuario = req.cookies.usuarioid
     db.Usuario.findByPk(idUsuario)
     .then((Usuario)=> {
       req.session.Usuario= Usuario.dataValues;
