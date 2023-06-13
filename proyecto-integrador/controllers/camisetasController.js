@@ -47,6 +47,18 @@ const camisetasController = {
     },
     edit: (req,res) =>{
         return res.render('product-edit')
+    },
+    cargar: (req,res) => {
+        let {imagen,product,descripcion}= req.body
+        //let usario_id = req.session.Usuario
+        db.Product.create({
+            imagen,
+            product,
+            descripcion
+        })
+        .then(function(result){
+            result.redirect(`/users/profile/${usuario_id}`)
+        })
     }
 
 
