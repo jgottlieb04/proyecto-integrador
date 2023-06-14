@@ -20,7 +20,7 @@ INSERT INTO users values(default,'Maidana' , 'sgalli@gmail.com', 'bears26', '/im
 
 create table productos(
 id INT UNSIGNED PRIMARY KEY  AUTO_INCREMENT,
-usuario_id INT UNSIGNED NOT NULL, 
+usuario_id INT UNSIGNED, 
 nombre VARCHAR(500) NOT NULL,
 imagen VARCHAR(500) NOT NULL,
 descripcion VARCHAR(500),

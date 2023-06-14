@@ -25,6 +25,22 @@ const camisetasController = {
     add: (req,res) =>{
         return res.render('product-add')
     },
+    cargar: (req,res) => {
+        let datos_u = req.locals;
+        console.log(datos_u);
+        let datos_p= req.body;
+        // let usuario_id = req.session.Usuario
+        db.Product.create(datos_p)
+        .then((result) => {
+            result.redirect("/")
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    },
+    comentar: (req,res) => {
+        return res.render('product')
+    },
     search: (req,res) =>{
         let busqueda=req.query.search;
         Product.findAll(
@@ -48,22 +64,22 @@ const camisetasController = {
     edit: (req,res) =>{
         return res.render('product-edit')
     },
-    cargar: (req,res) => {
-        let {imagen, nombre , descripcion}= req.body
+    // cargar: (req,res) => {
+    //     let {imagen, nombre , descripcion}= req.body
         // let usuario_id = req.session.Usuario
-        db.Product.create({
-            imagen,
-            nombre,
-            descripcion
-        })
-        .then(function(result){
-            result.redirect("/")
+    //     db.Product.create({
+    //         imagen,
+    //         nombre,
+    //         descripcion
+    //     })
+    //     .then(function(result){
+    //         result.redirect("/")
             // result.redirect(`/users/profile/${usuario_id}`)
-        })
-        .catch(function(error){
-            console.log(error)
-        })
-    }
+    //     })
+    //     .catch(function(error){
+    //         console.log(error)
+    //     })
+    // }
 
 
 }
