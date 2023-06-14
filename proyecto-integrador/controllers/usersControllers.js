@@ -25,12 +25,12 @@ const controller = {
                     return res.render('login')
                 }
                 if (result == null) {
-                    errors.message = "Email no encontrado"
+                    errors.message = "Email no registrado"
                     res.locals.errors = errors;
                     return res.render('login')
                 }
                 if (contra == '') {
-                    errors.message = "Contraseña es un campo obligatorio"
+                    errors.message = "Debes poner una contraseña"
                     res.locals.errors = errors;
                     return res.render('login')
                 }
@@ -45,13 +45,13 @@ const controller = {
                 if (clavecorrecta){
                     
                     req.session.Usuario=result.dataValues
-                    // if (req.body.recordar != undefined) {
-                    //     res.cookie('usuarioid', result.id, {maxAge: 1000 * 60 * 15})
-                    // }
+                    //  if (req.body.recordar != undefined) {
+                    //      res.cookie('usuario', result.id, {maxAge: 1000 * 60 * 15})
+                    //  }
                     return res.redirect('/users/profile')
                    
                 }else {
-                    errors.message = "Contraseña mal"
+                    errors.message = "Contraseña incorrecta"
                     res.locals.errors = errors
                     return res.render('login')
                     
