@@ -22,9 +22,9 @@ const camisetasController = {
             console.log(error);
         });
     },
-    add: (req,res) =>{
+     add: (req,res) =>{
         return res.render('product-add')
-    },
+     },
     // cargar: (req,res) => {
     //     let info=req.body;
     //     let prop= {
@@ -40,19 +40,19 @@ const camisetasController = {
     // },
         
 
-    // cargar: (req,res) => {
-    //     let datos_u = req.locals;
-    //     console.log(datos_u);
-    //     let datos_p= req.body;
-    //     // let usuario_id = req.session.Usuario
-    //     db.Product.create(datos_p)
-    //     .then((result) => {
-    //         result.redirect("/")
-    //     })
-    //     .catch(function(error){
-    //         console.log(error)
-    //     })
-    // },
+    cargar: (req,res) => {
+        let datos_u = req.locals;
+        console.log(datos_u);
+        let datos_p= req.body;
+        // let usuario_id = req.session.Usuario
+        db.Product.create(datos_p)
+        .then((result) => {
+            result.redirect("/")
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    },
     comentar: (req,res) => {
         return res.render('product')
     },
@@ -97,30 +97,7 @@ const camisetasController = {
     //         console.log(error)
     //     })
     // },
-    cargar: 
-     function (req, res) {
-        let form = req.body
-        let nombre = form.nombre
-        let imagen = form.imagen
-        let descripcion = form.descripcion
-        //return res.send(req.body)
-        db.Product.create({
-            usuario_id: req.session.Usuario.id,  //aca creo que tenemos que hacer un find by PK para encontrar el id del usuario que corresponda con el de session 
-            nombre: nombre,
-            descripcion: descripcion,
-            imagen: imagen,    
-            
-
-        })
-        .then(
-            res.redirect(`/perfil/id/${req.session.user.id}`)
-        )
-        .catch(function(errors){
-            return errors
-        })
     
-
-    }, 
     
 
 
