@@ -9,7 +9,13 @@ const indexController = {
         //     include: [{association: "comentarios"}, {association: "usuarios"}]
         // }
 
-        Product.findAll()
+        Product.findAll({
+            order:[
+                ['created_at','DESC'],
+            ],
+        }
+            
+        )
             .then(function(result){
 
                 return res.render("index", { 
