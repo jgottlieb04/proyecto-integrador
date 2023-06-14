@@ -73,7 +73,32 @@ const controller = {
     })
 },
     store: function(req,res){
-        let info =req.body;
+        
+        let errors = {}
+        if (req.body.Mail == "") {
+            errors.message = "Ingresa un Mail"
+            res.locals.errors = errors
+            return res.render("register")
+        } else if (req.body.contra == "") {
+            errors.message = "Completa la contrasena"
+            res.locals.errors = errors
+            return res.render("register")
+        } else if (req.body.user == "") {
+            errors.message = "Ingresa un usuario"
+            res.locals.errors = errors
+            return res.render("register")
+        } else if (req.body.age == "") {
+            errors.message = "Ingresa tu fecha de nacimiento"
+            res.locals.errors = errors
+            return res.render("register")    
+        }
+            else if (req.body.DNI == "") {
+            errors.message = "Ingresa DNI"
+            res.locals.errors = errors
+            return res.render("register")}   
+        
+        
+        else{let info =req.body;
         console.log(info);
         let usersave= {
             usuario:info.user,
@@ -93,6 +118,7 @@ const controller = {
         .catch(function(error){
             console.log(error)
         });
+    }
         
 },
     profile: function(req,res){

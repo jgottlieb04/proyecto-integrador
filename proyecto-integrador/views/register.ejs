@@ -3,9 +3,13 @@
 <div class="container products-wrapper">
     <div class="row">
         <div class="col-12">
+
             <h2 class="products-title">Registrate</h2>
 
             <section>
+                <% if (locals.errors) { %>
+                    <p><%= locals.errors.message %></p>
+                   <% } %>
                 <form action="/users/register" method="POST">
                     <div>
                         <label> Foto de perfil:</label>
