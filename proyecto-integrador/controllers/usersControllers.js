@@ -6,9 +6,14 @@ let op= db.Sequelize.Op
 
 const controller = {
     login: function(req,res){
-   return res.render('login',{
-    
-   })
+        if (req.session.Usuario == undefined) {
+            return res.render ('login')
+        }
+        else{
+            res.redirect("/")
+        }
+
+   
 },
     loginPost: function(req,res){
         let emailbuscado= req.body.Mail;
@@ -68,10 +73,16 @@ const controller = {
  },
     
     register:function(req,res){
-    return res.render('register',{
-        
-    })
+        if (req.session.Usuario == undefined) {
+            return res.render ('register')
+        }
+        else{
+            res.redirect("/")
+        }
+
+   
 },
+
     store: function(req,res){
         
         let errors = {}
@@ -150,7 +161,7 @@ const controller = {
     edit: function(req,res){
         return res.render('profile-edit',{
             
-            perfil:data.usuario
+            
 
         } )
     }
