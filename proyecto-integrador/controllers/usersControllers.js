@@ -18,6 +18,28 @@ const controller = {
         }
         Usuario.findOne( filtrado)
         .then((result)=>{
+            let errors = {};
+                if (emailbuscado == '') {
+                    errors.message = "El mail está vacío."
+                    res.locals.errors = errors;
+                    return res.render('login')
+                }
+                if (result == null) {
+                    errors.message = "Email no encontrado"
+                    res.locals.errors = errors;
+                    return res.render('login')
+                }
+                if (contra == '') {
+                    errors.message = "Contraseña es un campo obligatorio"
+                    res.locals.errors = errors;
+                    return res.render('login')
+                }
+
+
+            
+            
+            
+            
             if (result != null){
                 let clavecorrecta=bcrypt.compareSync(contra, result.contrasena)
                 if (clavecorrecta){
@@ -29,7 +51,9 @@ const controller = {
                     return res.redirect('/users/profile')
                    
                 }else {
-                    return res.locals ("login")
+                    errors.message = "Contraseña mal"
+                    res.locals.errors = errors
+                    return res.render('login')
                     
                 }
             }else {

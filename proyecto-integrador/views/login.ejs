@@ -4,6 +4,9 @@
     <div class="row">
         <div class="col-12">
             <section>
+                <% if (locals.errors) { %>
+            <p><%= locals.errors.message %></p>
+           <% } %>
                 <form action="/users/login" method="POST">
                     <h2 class="products-title">login</h2>
                     
