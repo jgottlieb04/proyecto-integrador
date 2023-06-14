@@ -12,6 +12,18 @@ var usersRouter = require('./routes/users');
 var camisetasRouter = require('./routes/camisetas');
 
 var app = express();
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
 /* configuracion para que session inicie*/
 app.use(session({secret:"Casacas GGA",resave:false, saveUninitialized:true}));
 //locals
@@ -31,37 +43,26 @@ app.use(function(req,res,next){
 
 
 
-
 // cookie
-//  app.use(function(req,res,next){
-//   if (req.cookies.usuario != undefined && req.session.Usuario==undefined) {
-//      let idUsuario = req.cookies.usuario
-//      db.Usuario.findByPk(idUsuario)
-//      .then((Usuario)=> {
-//        req.session.Usuario= Usuario.dataValues;
-//        res.locals.Usuario =Usuario.dataValues;
+  app.use(function(req,res,next){
+  if (req.cookies.usuario != undefined && req.session.Usuario==undefined) {
+      let idUsuario = req.cookies.usuario
+      db.Usuario.findByPk(idUsuario)
+      .then((Usuario)=> {
+        req.session.Usuario= Usuario.dataValues;
+        res.locals.Usuario =Usuario.dataValues;
 
-//        return next()
+        return next()
 
-//      })
-//      .catch((err)=> {
-//        console.log(err)
-//      })
-//    } else {
-//      return next()
-//    }
-//  });
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
+      })
+      .catch((err)=> {
+        console.log(err)
+      })
+    } else {
+      return next()
+    }
+  });
+  
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/camisetas', camisetasRouter);
