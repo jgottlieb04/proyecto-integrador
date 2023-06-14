@@ -46,8 +46,10 @@ const camisetasController = {
         Product.findAll(
             {
                 where:[{
-                    nombre: {[op.like]:`%${busqueda}%`}}
-                ]
+                    nombre: {[op.like]:`%${busqueda}%`}},
+                    
+                ],
+                order:[['created_at','DESC']]
             }
         ) .then(function(result){
             return res.render('search-results',{
