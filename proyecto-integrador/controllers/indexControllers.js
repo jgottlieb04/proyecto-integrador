@@ -19,7 +19,7 @@ const indexController = {
             .then(function(result){
 
                 return res.render("index", { 
-                    productos: result, comentarios: result
+                    productos: result, comentarios: result, usuarios:result
                 })
             })
             .catch(function(error){
