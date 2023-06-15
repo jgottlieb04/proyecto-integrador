@@ -133,23 +133,12 @@ const controller = {
         
 },
     profile: function(req,res){
-        let id = req.params.id;
-        let rel= {
-            include: [
-                {association: "comentarios"}, { association: "Product"}
-            ]
-        }
-        Usuario.findByPk(id,rel)
-         .then(function(result){
-            //return res.send(result)
-            return res.render('profile',{
-                usuarios: result,
-               
-            })        
-        })
-        .catch(function(error){
-            console.log(error);
-        });
+        return res.render('profile',{
+            
+            
+
+
+        } )
     },
     profile_id: function(req,res){
         let id = req.params.id;
