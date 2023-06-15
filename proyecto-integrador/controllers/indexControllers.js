@@ -27,7 +27,8 @@ const indexController = {
             });
     },
     cerrarSesion: function(req, res){
-        req.session.Usuario = undefined
+        res.clearCookie('usuario');
+        res.clearCookie('connect.sid');
         res.redirect("/")
     }
 
