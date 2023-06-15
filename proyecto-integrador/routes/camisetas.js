@@ -13,6 +13,7 @@ router.post('/cargar',ControllerC.cargar);
 
 router.get('/id/:id', ControllerC.detalle);
 router.get('/search',ControllerC.search);
+router.get('/search',ControllerC.searchUser);
 router.get('/edit',ControllerC.edit)
 module.exports = router;
 
