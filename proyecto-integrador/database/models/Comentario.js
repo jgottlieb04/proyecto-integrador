@@ -12,6 +12,8 @@ module.exports= function (sequelize, dataTypes){
         },
         usuario_id:{
             type: dataTypes.STRING,
+            allowNull: true,
+            unsigned: true
         },
         comentario:{
             type: dataTypes.STRING,

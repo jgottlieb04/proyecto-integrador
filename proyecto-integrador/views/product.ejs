@@ -36,9 +36,12 @@
 										</section>
 										<form class="form" action="/camisetas/id/<%= productos.id %>" method="post">
 											<input class="form-input" type="text" value=""
-												placeholder="Agregar comentario">
+												placeholder="Agregar comentario" name="newComment">
 											<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 										</form>
+										<% if (locals.errors) { %>
+											<p><%= locals.errors.mensaje %></p>
+										   <% } %>
 										<hr>
 									</div>
 								</div>
@@ -47,3 +50,4 @@
 						<!-- /product detail -->
 
 						<%- include('./partials/footer') %>
+						

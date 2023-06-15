@@ -102,15 +102,7 @@ const controller = {
                 errors.mensaje = "La contrasena debe tener mas de 3 caracteres"
                 res.locals.errors = errors
                 return res.render("register")
-        } else if (req.body.Mail != undefined) {
-            errors.mensaje = "Este mail ya esta registrado"
-            res.locals.errors = errors
-            return res.render("register")
-        } else if (req.body.user != undefined) {
-            errors.mensaje = "El nombre de usuario ya existe"
-            res.locals.errors = errors
-            return res.render("register")
-        }
+        }  
              
         
         

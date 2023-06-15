@@ -7,9 +7,11 @@ const ControllerC = require('../controllers/camisetasController');
 /* GET users listing. */
 router.get('/add',ControllerC.add);
 router.post('/cargar',ControllerC.cargar);
-
+router.post('/id/:id', ControllerC.comentar);
 router.get('/id/:id', ControllerC.detalle);
 router.get('/search',ControllerC.search);
 router.get('/edit',ControllerC.edit)
 module.exports = router;
+
+
 
