@@ -25,17 +25,17 @@ const controller = {
         .then((result)=>{
             let errors = {};
                 if (emailbuscado == '') {
-                    errors.message = "El mail está vacío."
+                    errors.mensaje = "El mail está vacío."
                     res.locals.errors = errors;
                     return res.render('login')
                 }
                 if (result == null) {
-                    errors.message = "Email no registrado"
+                    errors.mensaje = "Email no registrado"
                     res.locals.errors = errors;
                     return res.render('login')
                 }
                 if (contra == '') {
-                    errors.message = "Debes poner una contraseña"
+                    errors.mensaje = "Debes poner una contraseña"
                     res.locals.errors = errors;
                     return res.render('login')
                 }
@@ -56,7 +56,7 @@ const controller = {
                     return res.redirect('/users/profile')
                    
                 }else {
-                    errors.message = "Contraseña incorrecta"
+                    errors.mensaje = "Contraseña incorrecta"
                     res.locals.errors = errors
                     return res.render('login')
                     
@@ -102,7 +102,15 @@ const controller = {
                 errors.mensaje = "La contrasena debe tener mas de 3 caracteres"
                 res.locals.errors = errors
                 return res.render("register")
-        } 
+        } else if (req.body.Mail != undefined) {
+            errors.mensaje = "Este mail ya esta registrado"
+            res.locals.errors = errors
+            return res.render("register")
+        } else if (req.body.user != undefined) {
+            errors.mensaje = "El nombre de usuario ya existe"
+            res.locals.errors = errors
+            return res.render("register")
+        }
              
         
         
