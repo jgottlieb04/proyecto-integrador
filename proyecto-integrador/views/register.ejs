@@ -7,9 +7,7 @@
             <h2 class="products-title">Registrate</h2>
 
             <section>
-                <% if (locals.errors) { %>
-                    <p><%= locals.errors.message %></p>
-                   <% } %>
+                
                 <form action="/users/register" method="POST">
                     <div>
                         <label> Foto de perfil:</label>
@@ -42,6 +40,9 @@
 						<input type="submit">
 					</div>
                 </form>
+                <% if (locals.errors) { %>
+                    <p><%= locals.errors.mensaje %></p>
+                   <% } %>
             </section>
         </div>
        

@@ -87,26 +87,23 @@ const controller = {
         
         let errors = {}
         if (req.body.Mail == "") {
-            errors.message = "Ingresa un Mail"
+            errors.mensaje = "Ingresa un Mail"
             res.locals.errors = errors
             return res.render("register")
         } else if (req.body.contra == "") {
-            errors.message = "Completa la contrasena"
+            errors.mensaje = "Completa la contrasena"
             res.locals.errors = errors
             return res.render("register")
         } else if (req.body.user == "") {
-            errors.message = "Ingresa un usuario"
+            errors.mensaje = "Ingresa un usuario"
             res.locals.errors = errors
             return res.render("register")
-        } else if (req.body.age == "") {
-            errors.message = "Ingresa tu fecha de nacimiento"
-            res.locals.errors = errors
-            return res.render("register")    
-        }
-            else if (req.body.DNI == "") {
-            errors.message = "Ingresa DNI"
-            res.locals.errors = errors
-            return res.render("register")}   
+        } else if (req.body.contra.length <= 3) {
+                errors.mensaje = "La contrasena debe tener mas de 3 caracteres"
+                res.locals.errors = errors
+                return res.render("register")
+        } 
+             
         
         
         else{let info =req.body;
