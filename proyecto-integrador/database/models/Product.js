@@ -14,6 +14,7 @@ module.exports= function (sequelize, dataTypes){
         },
         nombre:{
             type: dataTypes.STRING,
+            allowNull : true 
         },
         imagen:{
             type:dataTypes.STRING,
@@ -21,6 +22,7 @@ module.exports= function (sequelize, dataTypes){
         },
         descripcion:{
             type: dataTypes.STRING,
+            allowNull : true
         },
         created_at:{
             type: dataTypes.DATE,

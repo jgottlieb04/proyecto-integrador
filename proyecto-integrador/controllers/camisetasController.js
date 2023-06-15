@@ -40,19 +40,19 @@ const camisetasController = {
     // },
         
 
-    cargar: (req,res) => {
-        let datos_u = req.locals;
-        console.log(datos_u);
-        let datos_p= req.body;
-        // let usuario_id = req.session.Usuario
-        db.Product.create(datos_p)
-        .then((result) => {
-            result.redirect("/")
-        })
-        .catch(function(error){
-            console.log(error)
-        })
-    },
+    // cargar: (req,res) => {
+    //     let datos_u = req.locals;
+    //     console.log(datos_u);
+    //     let datos_p= req.body;
+    //     // let usuario_id = req.session.Usuario
+    //     db.Product.create(datos_p)
+    //     .then((result) => {
+    //         result.redirect("/")
+    //     })
+    //     .catch(function(error){
+    //         console.log(error)
+    //     })
+    // },
     comentar: (req,res) => {
         return res.render('product')
     },
@@ -81,22 +81,22 @@ const camisetasController = {
     edit: (req,res) =>{
         return res.render('product-edit')
     },
-    // cargar: (req,res) => {
-    //     let {imagen, nombre , descripcion}= req.body
-    //     let usuario_id = req.session.Usuario.id
-    //     db.Product.create({
-    //         imagen,
-    //         nombre,
-    //         descripcion
-    //     })
-    //     .then(function(result){
-    //         result.redirect("/")
-    //         result.redirect(`/users/profile/${usuario_id}`)
-    //     })
-    //     .catch(function(error){
-    //         console.log(error)
-    //     })
-    // },
+    cargar: (req,res) => {
+        let {imagen, nombre , descripcion}= req.body
+        let usuario_id = req.session.Usuario.id
+        db.Product.create({
+            imagen,
+            nombre,
+            descripcion,
+            usuario_id
+        })
+        .then((data) => {
+            res.redirect("/")
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    },
     
     
 

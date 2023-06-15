@@ -6,7 +6,7 @@ var router = express.Router();
 const ControllerC = require('../controllers/camisetasController');
 /* GET users listing. */
 router.get('/add',ControllerC.add);
-router.post('/add',ControllerC.cargar);
+router.post('/cargar',ControllerC.cargar);
 //router.post('/comentar',ControllerC.comentar);
 
 
