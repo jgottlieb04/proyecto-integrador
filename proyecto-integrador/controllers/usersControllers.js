@@ -169,7 +169,33 @@ const controller = {
             
 
         } )
-    }
+    },
+    searchUser: (req,res) =>{
+        let busqueda=req.query.search;
+        Usuario.findAll({
+      
+            where:{
+              [op.or]:[
+              {usuario: { [op.like]: "%" + busqueda + "%" }},
+              {email: { [op.like]: "%" + busqueda + "%" }},
+      
+              ]},
+      
+              order: [
+                ['createdAt', 'DESC']]
+              })
+            .then(function(result){
+            return res.render('search-users',{
+                productos: result, 
+                comentarios: result,
+                usuarios: result
+            })
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        
+    },
     
     
 }

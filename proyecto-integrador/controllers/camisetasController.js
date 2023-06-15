@@ -47,15 +47,19 @@ const camisetasController = {
     },
     search: (req,res) =>{
         let busqueda=req.query.search;
-        Product.findAll(
-            {
-                where:[{
-                    nombre: {[op.like]:`%${busqueda}%`}},
-                    
-                ],
-                order:[['created_at','DESC']]
-            }
-        ) .then(function(result){
+        Product.findAll({
+      
+            where:{
+              [op.or]:[
+              {nombre: { [op.like]: "%" + busqueda + "%" }},
+              {descripcion: { [op.like]: "%" + busqueda + "%" }},
+      
+              ]},
+      
+              order: [
+                ['createdAt', 'DESC']]
+              })
+            .then(function(result){
             return res.render('search-results',{
                 productos: result, 
                 comentarios: result,
@@ -64,12 +68,14 @@ const camisetasController = {
         })
         .catch(function(error){
             console.log(error);
-        });
+        })
         
     },
     edit: (req,res) =>{
         return res.render('product-edit')
     },
+    
+    
    
     
     
