@@ -29,15 +29,34 @@
 
 <!-- Mis productos -->
 <div class="container products-wrapper">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="products-title">Mis productos</h2>
-      </div>
-      <!-- Show the "ultimos" products -->
-      
-  
+    <div class="row"></div>
+        <% if (usuarios.Product != null) { %>
+            <div class="col-12">
+              <h2 class="products-title">Mis productos</h2>
+              <% for( let i = 0; i < usuarios.Product.length; i++ ) { %>
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <section class="product-box">
+                      <a href="/camisetas/id/<%= usuarios.Product[i].id %>">
+                        <figure class="product-box_image">
+                          <img src="<%= usuarios.Product[i].imagen %>"alt="">
+                        </figure>
+                        <article class="product-box_data">
+                          <h2><%= usuarios.Product[i].nombre %></h2>
+                          <p><%= usuarios.Product[i].descripcion %> </p>
+                          <p>Usuario: <%= usuarios.usuario %></p>
+                        </article>
+                      </a>
+                    </section>
+                  </div>
+                <% } %>
+            </div>
+            <% } else { %>
+                <div class="col-12">
+                    <h2 class="products-title">Este usuario no tiene productos publicados</h2>
+                </div>            
+        <% } %>
     </div>
-  </div>
-        <%- include('./partials/footer') %>
+</div>
+    <%- include('./partials/footer') %>
         
        
