@@ -26,12 +26,23 @@
         <button class="btn-toggle-navbar">
             <i class="fas fa-bars"></i>
         </button>
-<% if (usuarioLogueado) { %>  <nav class="main-navbar">
+<% if (usuarioLogueado) { %>  
+    
+  
+    <div class="col-7 col-md-6">
+        <form action="/users/search" method="GET" class="search-form">
+            <input type="text" name="search" placeholder="Buscar usuarios" class="search-form_input">
+            <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+        </form> 
+    </div>
+
+    <nav class="main-navbar">
     <ul class="left-navbar">
         <li><a href="/">Todos los productos</a></li>
         <li><a href="/camisetas/add">Cargar productos</a></li>
     </ul>
 
+   
     <ul class="right-navbar">
         <li><a href="/users/profile">
                  <i class="fas fa-user">
@@ -43,6 +54,7 @@
             </a>
         </li>
         <li>
+            
             <form action="/" method="post">
                 <button class="logout" type="submit">
                     Cerrar sesión <i class="fas fa-sign-in-alt"></i>
@@ -51,6 +63,9 @@
         </li>
     </ul>
 </nav>
+
+
+
  
 <% } else {%> 
     <nav class="main-navbar">

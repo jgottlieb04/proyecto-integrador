@@ -12,6 +12,7 @@ router.get('/profile', controller.profile)
 router.get('/profile/id/:id', controller.profile_id)
 
 router.get('/profile-edit', controller.edit)
+router.get('/search',controller.searchUser);
 
 
 
