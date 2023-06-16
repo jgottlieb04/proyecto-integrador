@@ -93,10 +93,36 @@ const camisetasController = {
         })
         
     },
-    edit: (req,res) =>{
-        return res.render('product-edit')
+    showForm: (req,res) =>{
+        let id= req.params.id;
+        Product.findByPk(id)
+        .then((result) => {
+            return res.render('product-edit',{productos: result})
+        
+        })
+        .catch((error) => {
+            console.log(error);
+        }
+        )
+       
     },
-    
+    store:(req,res)=>{
+        let id= req.params.id
+        let info=req.body;
+        Product.update(info, {
+            where: [
+                {id:id}
+            ]
+        })
+        .then((result) => {
+            return res.redirect('/camisetas/id/' + id)
+        })
+        .catch((error) => {
+            console.log(error);
+        }
+        )
+        
+    }
     
     
     
