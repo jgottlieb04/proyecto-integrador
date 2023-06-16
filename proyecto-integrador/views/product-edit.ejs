@@ -10,23 +10,23 @@
                 <form action="/camisetas/id/<%= productos.id %>" method="post">
                     <div>
                         <label> Foto del producto:</label>
-                        <input type="text" id="imagen" name="imagen">
+                        <input type="text" id="imagen" name="imagen" value="<%= productos.imagen %>">
                         
                     </div>
                     
                     
                     <div>
                         <label >nombre del producto:</label>
-                        <input type="text" name="product">
+                        <input type="text" name="product"value="<%= productos.nombre %>">
                     </div>
 					<div>
                         <label >descripcion:</label>
-                        <input type="text" name="descripcion">
+                        <input type="text" name="descripcion"value="<%= productos.descripcion %>">
                     </div>
                     
                     <div>
                         <label >Fecha de carga:</label>
-                        <input type="date" name="Fecha">
+                        <input type="date" name="Fecha" value="<%= productos.updated_at %>">
                     </div>
 					<div>
 						<button type="submit"> Actualizar</button>

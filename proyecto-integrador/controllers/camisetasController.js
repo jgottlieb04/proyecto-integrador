@@ -93,10 +93,11 @@ const camisetasController = {
         })
         
     },
-    showForm: (req,res) =>{
+    showFormUpdate: (req,res) =>{
         let id= req.params.id;
         Product.findByPk(id)
         .then((result) => {
+            console.log(result);
             return res.render('product-edit',{productos: result})
         
         })
