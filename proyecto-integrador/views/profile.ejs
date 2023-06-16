@@ -17,7 +17,7 @@
             <div>
                 <ul class="">
                     <li><%= usuarios.email %></li>
-                    <li>8 productos</li>
+                    <li><%= usuarios.Product.length %> productos</li>
                     <li>200 seguidores</li>
                     <li>300 comentarios</li>
                 </ul>
@@ -30,7 +30,6 @@
 <!-- Mis productos -->
 <div class="container products-wrapper">
     <div class="row">
-        <% if (usuarios.Products !== undefined) { %>
             <div class="col-12">
                 <h2 class="products-title">Mis productos</h2>
                 <% for( let i = 0; i < usuarios.Product.length; i++ ) { %>
@@ -50,11 +49,6 @@
                     </div>
                   <% } %>
               </div>
-            <% } else { %>
-                <div class="col-12">
-                    <h2 class="products-title">Este usuario no tiene productos publicados</h2>
-                </div>
-        <% } %>
     </div>
 </div>
     <%- include('./partials/footer') %>
