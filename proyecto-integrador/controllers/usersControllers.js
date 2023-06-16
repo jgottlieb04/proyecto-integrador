@@ -170,12 +170,14 @@ profile: function(req,res){
         });
     },
     edit: function(req,res){
-        return res.render('profile-edit',{
+              if (req.session.Usuario != undefined) {
+                return res.render ('profile-edit')
+            }
+                else{
+                res.redirect("/")
+            }
             
-            
-
-        } )
-    },
+         },
     searchUser: (req,res) =>{
         let busqueda=req.query.search;
         Usuario.findAll({
