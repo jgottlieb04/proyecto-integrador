@@ -17,6 +17,11 @@
 											class="product-detail-img">
 										<p class="product-detail-description">
 											<%= productos.descripcion %>
+											<br>
+										<a class="product-detail-description" href="/users/profile/<%= productos.usuarios.id %>">
+											Usuario: <%= productos.usuarios.usuario %>
+										</a>
+										
 										</p>
 									</article>
 									<div class="col-12 col-lg-4">
