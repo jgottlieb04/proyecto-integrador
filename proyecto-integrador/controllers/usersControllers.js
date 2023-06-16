@@ -148,7 +148,7 @@ profile: function(req,res){
         ]
     }
     Usuario.findByPk(id,rel)
-     .then(function(result){
+    .then(function(result){
         //return res.send(result)
         return res.render('profile',{
             usuarios: result,
@@ -159,24 +159,6 @@ profile: function(req,res){
         console.log(error);
     });
 },
-    profile_id: function(req,res){
-        let id = req.params.id;
-        let rel= {
-            include: [
-                {association: "comentarios"}, { association: "Product"}
-            ]
-        }
-        Usuario.findByPk(id,rel)
-         .then(function(result){
-            return res.render('profile',{
-                usuarios: result,
-               
-            })        
-        })
-        .catch(function(error){
-            console.log(error);
-        });
-    },
     edit: function(req,res){
               if (req.session.Usuario != undefined) {
                 return res.render ('profile-edit')

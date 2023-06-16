@@ -1,6 +1,8 @@
 const { Sequelize } = require('../database/models');
 const db = require('../database/models')
 const Product =db.Product //alias del modelo
+const Comentario =db.Comentario
+const Usuario =db.Usuario
 let op= db.Sequelize.Op
 const camisetasController = {
 
@@ -19,10 +21,10 @@ const camisetasController = {
             console.log(error);
         });
     },
-     add: (req,res) =>{
+    add: (req,res) =>{
         return res.render('product-add')
-     },
-     cargar: (req,res) => {
+    },
+    cargar: (req,res) => {
         let {imagen, nombre , descripcion}= req.body
         let usuario_id = req.session.Usuario.id
         db.Product.create({
@@ -40,7 +42,30 @@ const camisetasController = {
     },
     
     comentar: (req,res) => {
-        return res.render('product')
+        let info= req.body
+        
+        
+        
+        if (info.newComment != undefined){
+            let nuevo = {
+                comentario: info.newComment,
+                usuario_id:req.session.Usuario.id ,
+                producto_id:req.params.id,
+                
+            }
+            Comentario.create(nuevo)
+            .then(function(resultado){
+        
+                return res.redirect('/camisetas/id/'+ nuevo.producto_id)
+                
+              })
+              .catch(function(error){
+                console.log (error)
+              })
+        }
+        
+
+        
     },
     search: (req,res) =>{
         let busqueda=req.query.search;
