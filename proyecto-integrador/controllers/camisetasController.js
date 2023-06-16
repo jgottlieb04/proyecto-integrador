@@ -107,7 +107,7 @@ const camisetasController = {
         )
        
     },
-    store:(req,res)=>{
+    update:(req,res)=>{
         let id= req.params.id
         let info=req.body;
         Product.update(info, {

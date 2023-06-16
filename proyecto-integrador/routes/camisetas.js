@@ -11,7 +11,7 @@ router.post('/id/:id', ControllerC.comentar);
 router.get('/id/:id', ControllerC.detalle);
 router.get('/search',ControllerC.search);
 router.get('/edit/:id',ControllerC.showFormUpdate)
-router.post('/edit/:id',ControllerC.store)
+router.post('/edit/:id',ControllerC.update)
 module.exports = router;
 
 

@@ -7,7 +7,7 @@
             <h2 class="products-title"> Modificar producto</h2>
 
             <section>
-                <form action="/camisetas/id/<%= productos.id %>" method="post">
+                <form action="/camisetas/edit/<%= productos.id %>" method="post">
                     <div>
                         <label> Foto del producto:</label>
                         <input type="text" id="imagen" name="imagen" value="<%= productos.imagen %>">
@@ -17,7 +17,7 @@
                     
                     <div>
                         <label >nombre del producto:</label>
-                        <input type="text" name="product"value="<%= productos.nombre %>">
+                        <input type="text" name="nombre"value="<%= productos.nombre %>">
                     </div>
 					<div>
                         <label >descripcion:</label>
@@ -26,7 +26,7 @@
                     
                     <div>
                         <label >Fecha de carga:</label>
-                        <input type="date" name="Fecha" value="<%= productos.updated_at %>">
+                        <input type="date" name="updated_at" value="<%= productos.updated_at %>">
                     </div>
 					<div>
 						<button type="submit"> Actualizar</button>
