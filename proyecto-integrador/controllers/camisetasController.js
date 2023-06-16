@@ -6,11 +6,8 @@ const camisetasController = {
 
     detalle: (req,res) => {
         let id= req.params.id;
-        let rel = {
-            include: [{
-                association: "comentarios", include: [{ association: "usuarios"}]
-            }]
-        }
+        let rel = { include: [{association: "usuarios"}, {association: "comentarios", include:[{association: "usuarios"}]}]
+        };
         Product.findByPk(id,rel)
          .then(function(result){
             return res.render('product',{
