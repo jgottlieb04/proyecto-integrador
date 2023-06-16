@@ -87,51 +87,59 @@ const controller = {
 },
 
     store: function(req,res){
-        
         let errors = {}
-        if (req.body.Mail == "") {
-            errors.mensaje = "Ingresa un Mail"
-            res.locals.errors = errors
-            return res.render("register")
-        } else if (req.body.contra == "") {
-            errors.mensaje = "Completa la contrasena"
-            res.locals.errors = errors
-            return res.render("register")
-        } else if (req.body.user == "") {
-            errors.mensaje = "Ingresa un usuario"
-            res.locals.errors = errors
-            return res.render("register")
-        } else if (req.body.contra.length <= 3) {
-                errors.mensaje = "La contrasena debe tener mas de 3 caracteres"
+        let email_repetido = req.body.Mail
+        let filtrado = {
+            where:[{email:email_repetido}]
+        }
+        Usuario.findOne(filtrado)
+        .then((result)=>{
+            if(result != undefined){
+                errors.mensaje = "El email ya esta registrado"
                 res.locals.errors = errors
                 return res.render("register")
-        }  
-             
-        
-        
-        else{let info =req.body;
-        console.log(info);
-        let usersave= {
-            usuario:info.user,
-            email:info.Mail,
-            contrasena:bcrypt.hashSync(info.contra,10),
-            foto_perfil:info.imagen,
-            fecha:info.age,
-            dni:info.DNI,
-        
-
-        };
-        console.log(usersave)
-        Usuario.create(usersave)
+            }
+            else if (req.body.Mail == "") {
+                errors.mensaje = "Ingresa un Mail"
+                res.locals.errors = errors
+                return res.render("register")
+            }
+            else if (req.body.contra == "") {
+                errors.mensaje = "Completa la contrasena"
+                res.locals.errors = errors
+                return res.render("register")
+            } else if (req.body.user == "") {
+                errors.mensaje = "Ingresa un usuario"
+                res.locals.errors = errors
+                return res.render("register")
+            } else if (req.body.contra.length <= 3) {
+                    errors.mensaje = "La contrasena debe tener mas de 3 caracteres"
+                    res.locals.errors = errors
+                    return res.render("register")
+            } 
+            else{let info =req.body;
+                console.log(info);
+                let usersave= {
+                    usuario:info.user,
+                    email:info.Mail,
+                    contrasena:bcrypt.hashSync(info.contra,10),
+                    foto_perfil:info.imagen,
+                    fecha:info.age,
+                    dni:info.DNI,
+            }
+            Usuario.create(usersave)
         .then(function(result){
             return res.redirect('/users/login')
         })
         .catch(function(error){
             console.log(error)
         });
-    }
-        
-},
+        }})
+        .catch((err)=>{
+            console.log(err)
+        });
+    },
+
 profile: function(req,res){
     let id = req.params.id;
     let rel= {
