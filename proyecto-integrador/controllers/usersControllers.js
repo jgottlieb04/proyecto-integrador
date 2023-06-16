@@ -168,6 +168,7 @@ profile: function(req,res){
             }
             
          },
+        
     searchUser: (req,res) =>{
         let busqueda=req.query.search;
         Usuario.findAll({
