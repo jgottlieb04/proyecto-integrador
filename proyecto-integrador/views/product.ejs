@@ -6,9 +6,11 @@
 								<h2 class="products-title">
 									<%= productos.nombre %>
 								</h2>
-								<p class="product-detail-description">
-									<a href="/camisetas/edit/<%= productos.id %>">Editar</a>
-								</p>
+								<% if (productos.usuario_id == locals.Usuario) { %>
+									<p class="product-detail-description">
+										<a href="/camisetas/edit/<%= productos.id %>">Editar</a>
+									</p>								 
+								<% } %>
 							</div>
 							<div class="product-detail">
 								<div class="row">
