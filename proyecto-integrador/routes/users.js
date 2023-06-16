@@ -11,6 +11,7 @@ router.post('/register', controller.store)
 router.get('/profile/:id', controller.profile)
 
 router.get('/profile-edit', controller.edit)
+
 router.get('/search',controller.searchUser);
 
 
