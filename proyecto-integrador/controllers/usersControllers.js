@@ -161,7 +161,16 @@ profile: function(req,res){
 },
     edit: function(req,res){
               if (req.session.Usuario != undefined) {
-                return res.render ('profile-edit')
+                let id =req.params.id
+                Usuario.findByPk(id)
+                .then((result) => {
+                    return res.render ('profile-edit')
+
+                }).catch((err)=>{
+                    console.log(err)
+
+                });
+                
             }
                 else{
                 res.redirect("/")
