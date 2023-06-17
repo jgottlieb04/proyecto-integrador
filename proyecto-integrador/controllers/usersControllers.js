@@ -30,12 +30,12 @@ const controller = {
                     res.locals.errors = errors;
                     return res.render('login')
                 }
-                if (result == null) {
+                else if (result == null) {
                     errors.mensaje = "Email no registrado"
                     res.locals.errors = errors;
                     return res.render('login')
                 }
-                if (contra == '') {
+                else if (contra == '') {
                     errors.mensaje = "Debes poner una contraseña"
                     res.locals.errors = errors;
                     return res.render('login')
@@ -116,7 +116,17 @@ const controller = {
                     errors.mensaje = "La contrasena debe tener mas de 3 caracteres"
                     res.locals.errors = errors
                     return res.render("register")
-            } 
+            } else if (req.body.DNI==""){
+                    errors.mensaje = "Debes ingresar un DNI"
+                    res.locals.errors = errors
+                    return res.render("register")
+
+            }else if (req.body.imagen==""){
+                errors.mensaje = "Debes ingresar una foto de perfil"
+                res.locals.errors = errors
+                return res.render("register")
+
+        }
             else{let info =req.body;
                 console.log(info);
                 let usersave= {

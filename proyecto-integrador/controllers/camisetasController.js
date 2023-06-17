@@ -70,7 +70,7 @@ const camisetasController = {
     search: (req,res) =>{
         let busqueda=req.query.search;
         Product.findAll({
-            include:[{association:'usuarios'}],
+      
             where:{
               [op.or]:[
               {nombre: { [op.like]: "%" + busqueda + "%" }},

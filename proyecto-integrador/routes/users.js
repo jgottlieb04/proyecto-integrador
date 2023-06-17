@@ -10,7 +10,7 @@ router.post('/register', controller.store)
 
 router.get('/profile/:id', controller.profile)
 
-router.get('/profile-edit/id:', controller.edit)
+router.get('/profile-edit/:id', controller.edit)
 
 router.get('/search',controller.searchUser);
 
