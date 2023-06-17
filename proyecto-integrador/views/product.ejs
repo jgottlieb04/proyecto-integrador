@@ -7,7 +7,17 @@
 									<%= productos.nombre %>
 								</h2>
 									<p class="product-detail-description">
-										<a href="/camisetas/edit/<%= productos.id %>">Editar</a>
+										<% if (locals.Usuario) { %>
+											<form class="form" action="/camisetas/id/<%= productos.id %>" method="post">
+												<a href="/camisetas/edit/<%= productos.id %>">EDITAR</a>
+												
+											</form>
+											<% } else { %>
+												<h2> Para editar necesitas una cuenta</h2>
+												<a href="/users/login" class="buy-now-button"> Inicia Session </a>
+												<a href="/users/register" class="buy-now-button"> Registrate </a>
+										<% } %>
+										
 									</p>
 							</div>
 							<div class="product-detail">
