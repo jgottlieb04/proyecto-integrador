@@ -70,7 +70,7 @@ const camisetasController = {
     search: (req,res) =>{
         let busqueda=req.query.search;
         Product.findAll({
-      
+            include: [{association: "usuarios"}, {association: "comentarios", include:[{association: "usuarios"}]}],
             where:{
               [op.or]:[
               {nombre: { [op.like]: "%" + busqueda + "%" }},
@@ -82,10 +82,9 @@ const camisetasController = {
                 ['createdAt', 'DESC']]
               })
             .then(function(result){
+            //    return res.send(result)
             return res.render('search-results',{
-                productos: result, 
-                comentarios: result,
-                usuarios: result
+                productos: result
             })
         })
         .catch(function(error){
