@@ -1,8 +1,8 @@
-const { Sequelize } = require('../database/models');
+
 const db = require('../database/models');
 const Usuario=db.Usuario ;
 const bcrypt =require('bcryptjs');
-const { where } = require('sequelize');
+
 let op= db.Sequelize.Op
 
 const controller = {

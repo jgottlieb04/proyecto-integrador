@@ -1,4 +1,4 @@
-const { Sequelize } = require('../database/models');
+
 const db = require('../database/models')
 const Product =db.Product //alias del modelo
 const Comentario =db.Comentario
